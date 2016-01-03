@@ -60,8 +60,6 @@ libraryDependencies += "com.twitter.finatra" % "finatra-slf4j_2.11" % "2.1.2"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.3"
 ```
 
-**TODO: talk about why these dependencies are required.**
-
 Out of three dependencies mentioned above, `finatra-http_2.11` is only required. `finatra-slf4j_2.11` and `logback-classic` are added for logging purpose only.
 
 > Couple of things that disappointed me once I added above mentioned dependencies was 1) time it took to download all the dependencies 2) few transient dependencies like `twitter-metrics` are not present on Maven central so you have to add Twitter's Maven repository located at https://maven.twttr.com.
@@ -169,7 +167,7 @@ class FitmanServer extends HttpServer {
 
 One of the feature of Finatra that impressed me most was its inbuilt support for feature testing. Feature testing is a form of blackbox testing that tests a particular feature from outside.
 
-Let's add dependencies to `build.sbt` file. You can view full build.sbt [here](TODO).
+Let's add dependencies to `build.sbt` file. You can view full build.sbt [here](https://github.com/shekhargulati/52-technologies-in-2016/blob/master/01-finatra/fitman/build.sbt).
 
 ```scala
 libraryDependencies += "com.twitter.finatra" % "finatra-http_2.11" % versions.finatra % "test"
