@@ -11,17 +11,13 @@ Week 1: Finatra -- Build Beautiful REST API The Twitter Way
 
 In this blog, we will cover Finatra version 2. Finatra version 2 is a complete rewrite of finatra and is significantly faster(50 times according to documentation) than version 1.x.
 
-## Why I wanted to learn finatra?
-
-**TODO**
-
 ## Prerequisite
 
 1. Scala 2.11.7
 2. IntelliJ Idea Community Edition
 3. JDK 8
 
-> Code for today's demo application is on Github at [https://github.com/shekhargulati/52-technologies-in-2016/01-finatra/fitman](https://github.com/shekhargulati/52-technologies-in-2016/01-finatra/fitman)
+> Code for today's demo application is on Github at [./fitman](./fitman)
 
 ## Building an application from scratch
 
