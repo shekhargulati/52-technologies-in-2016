@@ -19,7 +19,7 @@ In this blog, we will cover Finatra version 2. Finatra version 2 is a complete r
 2. IntelliJ Idea Community Edition
 3. JDK 8
 
-> Code for today's demo application is on Github at [fitman](./fitman)
+> Code for today's demo application is on Github at [fitman](fitman)
 
 ## Building an application from scratch
 
