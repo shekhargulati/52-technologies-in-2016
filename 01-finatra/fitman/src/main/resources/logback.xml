@@ -1,0 +1,16 @@
+<configuration>
+    <!-- Console Appender -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date %level %-25X{traceId} %-25logger{0} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Per Package Config -->
+    <logger name="com.twitter" level="info"/>
+
+    <!-- Root Logger -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
