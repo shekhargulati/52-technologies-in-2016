@@ -11,13 +11,15 @@ Week 1: Finatra -- Build Beautiful REST API The Twitter Way
 
 In this blog, we will cover Finatra version 2. Finatra version 2 is a complete rewrite of finatra and is significantly faster(50 times according to documentation) than version 1.x.
 
+> This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)
+
 ## Prerequisite
 
 1. Scala 2.11.7
 2. IntelliJ Idea Community Edition
 3. JDK 8
 
-> Code for today's demo application is on Github at [./fitman](./fitman)
+> Code for today's demo application is on Github at [fitman](./fitman)
 
 ## Building an application from scratch
 
@@ -27,11 +29,11 @@ In this blog, we will build a simple application called **fitman**. The goal of 
 
 Open IntelliJ Idea and select Scala > SBT project. You will see screen as shown below.
 
-![](images/step1-scala-sbt-project.png)
+<img src="images/step1-scala-sbt-project.png" height="450">
 
 After selecting, press ***Next*** button. Enter the project details and press ***Finish*** button.
 
-![](images/step1-enter-project-details.png)
+<img src="images/step1-enter-project-details.png" height="450">
 
 This will create a Scala based SBT project that we will use.
 
@@ -142,7 +144,7 @@ Every Finatra by default exposes an admin interface at http://localhost:9990/adm
 
 You can configure admin interface to run on any other port by passing `-admin.port` flag. In IntelliJ, edit your run configuration as shown below.
 
-![](images/step3-change-admin-port.png)
+<img src="images/step3-change-admin-port.png" height="450">
 
 From now on Admin interface will be available at http://localhost:10000/admin.
 
