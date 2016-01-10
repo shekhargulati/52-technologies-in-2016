@@ -5,6 +5,8 @@ Welcome to the second blog of [52-technologies-in-2016](https://github.com/shekh
 
 > This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)
 
+<img src="http://www.scala-sbt.org/assets/typesafe_sbt_svg.svg" height="300" width="300" align="middle">
+
 ## Table of Contents
 
 We will cover the following in this tutorial:
