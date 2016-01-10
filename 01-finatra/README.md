@@ -1,4 +1,4 @@
-Week 1: Finatra -- Build Beautiful REST API The Twitter Way
+Week 1: Finatra Tutorial -- Build Beautiful REST API The Twitter Way
 -------
 
 [Finatra](https://github.com/twitter/finatra) is an open-source project by Twitter that can be used to build REST APIs in Scala programming language. Finatra builds on top of Twitter's Scala stack -- twitter-server, finagle, and twitter-util.
@@ -9,7 +9,7 @@ Week 1: Finatra -- Build Beautiful REST API The Twitter Way
 
 <img src="http://twitter.github.io/finatra/images/finatra_transparent.gif" height="300" align="middle">
 
-In this blog, we will cover Finatra version 2. Finatra version 2 is a complete rewrite of finatra and is significantly faster(50 times according to documentation) than version 1.x.
+In this step-by-step tutorial, we will cover how to build a Scala REST API using Finatra version 2. Finatra version 2 is a complete rewrite of finatra and is significantly faster(50 times according to documentation) than version 1.x.
 
 > This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)
 

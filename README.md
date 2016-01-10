@@ -5,4 +5,4 @@ I have taken a challenge to learn a new technology every week in 2016. The goal 
 
 Below is the list of technologies covered in this series:
 
-1. **[Week 1: January 03, 2016](./01-finatra/README.md)** [Finatra - Build Beautiful REST API The Twitter Way](./01-finatra/README.md). In this blog, we will learn how to write REST APIs using Twitter's open source framework Finatra.
+1. **[Week 1: January 03, 2016](./01-finatra/README.md)** [Finatra - Build Beautiful REST API The Twitter Way](./01-finatra/README.md). In this tutorial, we will learn how to write Scala REST APIs using Twitter's open source framework Finatra. We will build an application from scratch covering all the steps required to build the application.
