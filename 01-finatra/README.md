@@ -293,7 +293,7 @@ In the code shown above, we did the following:
 
 1. We created a mutable Map to store weight for a user.
 2. In the `post("/weights")` callback, we are directly using our case class Weight instead of using Finagle request. Finatra automatically converts the request body to the case class.
-3. In the post method callback, we first checks whether we user exists in the db or not. If user exists, then we add weight to its existing weights collection else we create new List with weight.
+3. In the post method callback, we first check whether the user exists in the db or not. If user exists, then we add weight to its existing weights collection else we create new List with weight.
 4. Finally, we return the response back to the user. `response.created` makes sure that HTTP status 201 is set. We also set the location header to point to a new resource.
 
 ### Step 6: View user weight
