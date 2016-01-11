@@ -195,10 +195,8 @@ $ mkdir -p src/test/scala
 Now, let's create a new Scala file `HelloSbt.scala` inside `src/main/scala` and place the following contents in it.
 
 ```scala
-object HelloSbt extends {
-  def main(args: Array[String]) {
-    println("Sbt says Hello!!")
-  }
+object HelloSbt extends App {
+  println("Sbt says Hello!!")
 }
 ```
 
