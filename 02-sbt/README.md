@@ -604,4 +604,12 @@ otherScalaVersions := Seq("2.9.1", "2.10.1")
 Now, when you will use sbt to build the project by default, it will build the project against the Scala version `2.11.1` but, you have an option to use other Scala versions defined in your build script.
 
 
+### Tip 3: Pass options to scala compiler
+
+You can pass options to `scalac` by defining a setting `scalacOptions` as shown below.
+
+```scala
+scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation", "-encoding", "utf8")
+```
+
 That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/2](https://github.com/shekhargulati/52-technologies-in-2016/issues/2).
