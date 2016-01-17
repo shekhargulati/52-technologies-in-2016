@@ -612,4 +612,53 @@ You can pass options to `scalac` by defining a setting `scalacOptions` as shown 
 scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation", "-encoding", "utf8")
 ```
 
+### Tip 4: View compile classpath dependencies
+
+To view compile classpath dependencies you can run the following task from inside the sbt shell. Task and its output is shown below.
+
+```scala
+> show compile:dependencyClasspath
+
+[info] List(Attributed(/Users/shekhargulati/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar), Attributed(/Users/shekhargulati/.ivy2/cache/com.typesafe.slick/slick_2.11/bundles/slick_2.11-3.1.1.jar), Attributed(/Users/shekhargulati/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.10.jar), Attributed(/Users/shekhargulati/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar), Attributed(/Users/shekhargulati/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.jar), Attributed(/Users/shekhargulati/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar), Attributed(/Users/shekhargulati/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar))
+```
+
+Similarly, if you have to view test classpath then you can run `show test:dependencyClasspath` task.
+
+### Tip 5: View dependency graph
+
+If you are Maven or Gradle user then one command that you would like to use is to view the dependency graph. sbt does not have a inbuilt command to view the dependency graph. You can view the dependency graph by using [sbt-dependency-graph plugin](https://github.com/jrudolph/sbt-dependency-graph).
+
+To use the plugin, first add the plugin to `project/plugins.sbt`.
+
+```scala
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.1")
+```
+
+Once done, reload the build configuration using the `reload` task.
+
+Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You can refer to sbt-dependency-graph plugin [documentation](https://github.com/jrudolph/sbt-dependency-graph#main-tasks) to get an overview of all the defined tasks.
+
+```
+> dependencyTree
+[info] Updating {file:/Users/shekhargulati/blogs/fitman/}fitman...
+[info] Resolving jline#jline;2.12.1 ...
+[info] Done updating.
+[info] default:fitman_2.11:0.1.0 [S]
+[info]   +-ch.qos.logback:logback-classic:1.1.3
+[info]   | +-ch.qos.logback:logback-core:1.1.3
+[info]   | +-org.slf4j:slf4j-api:1.7.10
+[info]   | +-org.slf4j:slf4j-api:1.7.7 (evicted by: 1.7.10)
+[info]   |
+[info]   +-com.typesafe.slick:slick_2.11:3.1.1 [S]
+[info]     +-com.typesafe:config:1.2.1
+[info]     +-org.reactivestreams:reactive-streams:1.0.0
+[info]     +-org.slf4j:slf4j-api:1.7.10
+[info]
+[success] Total time: 0 s, completed 17 Jan, 2016 3:00:51 PM
+```
+
+
+
+
+
 That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/2](https://github.com/shekhargulati/52-technologies-in-2016/issues/2).
