@@ -479,3 +479,7 @@ case class Weight(
                    postedAt: Instant = Instant.now()
                  )
 ```
+
+That's it for this week. Please give your feedback [https://github.com/shekhargulati/52-technologies-in-2016/issues/1](https://github.com/shekhargulati/52-technologies-in-2016/issues/1)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016)](https://github.com/igrigorik/ga-beacon)
