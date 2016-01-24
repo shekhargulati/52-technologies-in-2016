@@ -659,4 +659,4 @@ Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You c
 
 That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/2](https://github.com/shekhargulati/52-technologies-in-2016/issues/2).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/02-sbt)](https://github.com/igrigorik/ga-beacon)

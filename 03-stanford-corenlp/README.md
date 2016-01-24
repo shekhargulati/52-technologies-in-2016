@@ -167,4 +167,4 @@ def sentiment(input: String): List[(String, Sentiment)] = Option(input) match {
 
 That's all for this week. Please provide your valuable feedback by adding a comment to https://github.com/shekhargulati/52-technologies-in-2016/issues/5.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/03-stanford-corenlp)](https://github.com/igrigorik/ga-beacon)

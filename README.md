@@ -18,6 +18,7 @@ Below is the list of technologies covered in this series:
 
 3. **[Week 3: January 17, 2016](./03-stanford-corenlp)** [Sentiment Analysis in Scala with Stanford CoreNLP](./03-stanford-corenlp/README.md). In this tutorial, we will learn how to use Stanford CoreNLP library for performing sentiment analysis of unstructured text in Scala.
 
+4. **[Week 4: January 24, 2016](./04-slick)** [Slick: Functional Relational Mapping for Mere Mortals Part 1](./04-slick/README.md). In this tutorial, we will learn how to get started with Slick so that we can interact with relational databases in our Scala applications. Slick is a powerful Scala library to work with relational databases.
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
