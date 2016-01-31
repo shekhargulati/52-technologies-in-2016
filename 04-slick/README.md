@@ -144,6 +144,8 @@ Let's understand the `TaksTable` class code shown above.
 
 4. The `*` method is the default projection of our table. You have to define this method in your `Table` class. The type of the `*` projection has to be the same as type specified in the `Table` type parameter. In our case, both have to be `Task`. The `<>` method is used to convert between a tuple `(title, description, createdAt, dueBy, tags, id)` and `Task` data type. The `<>` needs two functions - first takes a tuple and convert it to an object and second a function that converts an object to a tuple.
 
+> It is not required to use a case class you could have also used a regular Scala class as well. If you do use a regular class, then you have to provide two extra functions corresponding to `tupled` and `unapply`. The advantage that we get by using a case class is that it provides `tupled` and `unapply` methods.
+
 ## Create TableQuery object
 
 Once we have defined our table definition `TaskTable`, we have to define a value of type `TableQuery` which represents an actual database table. It provides a query DSL that you can use to interact with the table.
