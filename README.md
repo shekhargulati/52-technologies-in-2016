@@ -20,6 +20,8 @@ Below is the list of technologies covered in this series:
 
 4. **[Week 4: January 24, 2016](./04-slick)** [Slick: Functional Relational Mapping for Mere Mortals Part 1](./04-slick/README.md). In this tutorial, we will learn how to get started with Slick so that we can interact with relational databases in our Scala applications. Slick is a powerful Scala library to work with relational databases.
 
+5. **[Week 5: January 31, 2016](./05-slick)** [Slick: Functional Relational Mapping for Mere Mortals Part 1: Querying Data](./05-slick/README.md). In this tutorial, we will learn how to perform `select` queries with Slick. Slick allows you to work with database tables in the same way as you work with Scala collections. This means that you can use methods like `map`, `filter`, `sort`, etc. to process data in your table.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
