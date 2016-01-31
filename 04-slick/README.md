@@ -1,4 +1,4 @@
-Slick: Functional Relational Mapping for Mere Mortals Part 1
+Slick 3: Functional Relational Mapping for Mere Mortals Part 1
 ----
 
 Welcome to the fourth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. Today, we will get started with Slick. Slick(Scala Language-Integrated Connection Kit) is a powerful Scala library to work with relational databases. **Slick is not an ORM library**. It bases its implementation on **functional programming** and does not hide database behind an ORM layer giving you full control over when a database access should happen. It allows you to work with database just like you are working with Scala collections. Slick API is asynchronous in nature making it suitable for building reactive applications. Although Slick itself is asynchronous in nature, internally it uses JDBC which is a synchronous API. Slick is a big topic so today we will only cover the basics. I will write couple more parts to this blog.
@@ -146,7 +146,7 @@ Let's understand the `TaksTable` class code shown above.
 
 ## Create TableQuery object
 
-Once we have defined our table definition `TaskTable`, we have to define a value of type `TableQuery` which represents an actual table. It provides a query DSL that you can use to interact with the table.
+Once we have defined our table definition `TaskTable`, we have to define a value of type `TableQuery` which represents an actual database table. It provides a query DSL that you can use to interact with the table.
 
 ```scala
 lazy val Tasks = TableQuery[TaskTable]

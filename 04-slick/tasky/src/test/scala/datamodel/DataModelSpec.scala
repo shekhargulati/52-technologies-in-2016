@@ -15,7 +15,7 @@ class DataModelSpec extends FunSpec with Matchers with BeforeAndAfterEach {
 
   override protected def beforeEach(): Unit = {
     db = Database.forConfig("taskydb")
-    db.run(DataModel.createTaskTableAction)
+    Await.result(db.run(DataModel.createTaskTableAction), 2 seconds)
   }
 
   override protected def afterEach(): Unit = db.shutdown
