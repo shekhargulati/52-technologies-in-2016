@@ -144,7 +144,31 @@ Let's understand the `TaksTable` class code shown above.
 
 4. The `*` method is the default projection of our table. You have to define this method in your `Table` class. The type of the `*` projection has to be the same as type specified in the `Table` type parameter. In our case, both have to be `Task`. The `<>` method is used to convert between a tuple `(title, description, createdAt, dueBy, tags, id)` and `Task` data type. The `<>` needs two functions - first takes a tuple and convert it to an object and second a function that converts an object to a tuple.
 
-> It is not required to use a case class you could have also used a regular Scala class as well. If you do use a regular class, then you have to provide two extra functions corresponding to `tupled` and `unapply`. The advantage that we get by using a case class is that it provides `tupled` and `unapply` methods.
+> It is not required to use a case class you could have also used a regular Scala class as well. If you do use a regular class, then you have to provide two extra functions corresponding to `tupled` and `unapply`. The advantage that we get by using a case class is that it provides `tupled` and `unapply` methods. In the code shown below, we have created a Task object and defined two methods `toTask` and `fromTask`. These methods will serve the purpose of `tupled` and `unapply` methods.
+
+```scala
+class Task(
+            val title: String,
+            val description: String = "",
+            val createdAt: LocalDateTime = LocalDateTime.now(),
+            val dueBy: LocalDateTime,
+            val tags: Set[String] = Set[String](),
+            val id: Long = 0L)
+
+object Task {
+
+  def apply(title: String,
+            description: String = "",
+            createdAt: LocalDateTime = LocalDateTime.now(),
+            dueBy: LocalDateTime,
+            tags: Set[String] = Set[String](),
+            id: Long = 0L): Task = new Task(title, description, createdAt, dueBy, tags, id)
+
+  def toTask(t: (String, String, LocalDateTime, LocalDateTime, Set[String], Long)): Task = new Task(t._1, t._2, t._3, t._4, t._5, t._6)
+
+  def fromTask(task: Task): Option[(String, String, LocalDateTime, LocalDateTime, Set[String], Long)] = Some((task.title, task.description, task.createdAt, task.dueBy, task.tags, task.id))
+}
+```
 
 ## Create TableQuery object
 
