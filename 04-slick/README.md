@@ -1,18 +1,18 @@
 Slick: Functional Relational Mapping for Mere Mortals Part 1
 ----
 
-Welcome to the fourth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. Today, we will get started with Slick. Slick(Scala Language-Integrated Connection Kit) is a powerful Scala library to work with relational databases. **Slick is not an ORM library**. It bases its implementation on **functional programming** and does not hide database behind an ORM layer giving you full control over when a database access should happen. It allows you to work with database just like you are working with Scala collections. Slick API is asynchronous in nature making it suitable for building reactive applications. Although Slick itself is asynchronous in nature, internally it uses JDBC which is a synchronous API. Slick is a big topic so today we will only cover basics. I will write couple more parts to this blog.
+Welcome to the fourth blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. Today, we will get started with Slick. Slick(Scala Language-Integrated Connection Kit) is a powerful Scala library to work with relational databases. **Slick is not an ORM library**. It bases its implementation on **functional programming** and does not hide database behind an ORM layer giving you full control over when a database access should happen. It allows you to work with database just like you are working with Scala collections. Slick API is asynchronous in nature making it suitable for building reactive applications. Although Slick itself is asynchronous in nature, internally it uses JDBC which is a synchronous API. Slick is a big topic so today we will only cover the basics. I will write couple more parts to this blog.
 
 The core idea behind Slick is that as a developer you don't have to write SQL queries. Instead, library will create SQL for you if you build the query using the constructs provided by the library.
 
 Benefits of using slick:
 
 1. Type safety and compile time checking
-2. Generate query for any database.
+2. Generate query for any database
 3. Composable
-4. Back-pressure built-in.
-5. Streaming support via reactive streams.
-6. You can use SQL as well.
+4. Back-pressure built-in
+5. Streaming support via reactive streams
+6. You can use SQL as well
 
 From the [Slick docs](http://slick.typesafe.com/doc/3.1.1/introduction.html#functional-relational-mapping):
 
@@ -49,16 +49,16 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 
 > **In this tutorial, we will Slick version 3.1.1**
 
-In the `build.sbt` file shown above, we have first defined basic information about the project like name, version, and description. We have also specified that we are going to use Scala version `2.11.7`.  After that we have declared few dependencies. The only required dependency is of `Slick`. `logback` is used for logging and `scalatest` will be used for writing test cases. In this tutorial, we will use `h2` database so we have declared its dependency as well. `h2` is an in-memory SQL database implementation written in `Java`. It runs in the same process as your application and is useful for testing and getting started purposes. For real apps, you will use databases like MySQL or PostgreSQL.
+In the `build.sbt` file shown above, we have first defined basic information about the project like name, version, and description. We have also specified that we are going to use Scala version `2.11.7`.  After that we have declared few dependencies. The only required dependency is of `Slick`. `logback` is used for logging and `scalatest` will be used for writing test cases. In this tutorial, we will use `h2` database so we have declared its dependency as well. `h2` is an in-memory SQL database implementation written in `Java`. It runs in the same process as your application and is useful for testing and getting started purposes. For real apps, you should use databases like MySQL or PostgreSQL.
 
-Create a directory structure inside the `tasky` directory.
+Create the following directory structure inside the `tasky` directory.
 
 ```bash
 $ mkdir -p src/main/scala
 $ mkdir -p src/test/scala
 ```
 
-Now we have a basic Scala SBT project setup for Slick development.
+Now, we have a basic Scala SBT project setup for Slick application development.
 
 Next, import the project in your favorite IDE.
 
@@ -78,7 +78,7 @@ object DataModel {
 }
 ```
 
-The import `slick.driver.H2Driver.api._` is required to tell which Slick database API we will be using in this application H2 in our case.
+The import `slick.driver.H2Driver.api._` is required to tell which Slick database API we will use in our application. As shown above, we are using H2 for our application.
 
 Let's create a new Scala datatype for our task management application. To keep things simple and easy to understand, we will start with only one domain object i.e. Task. `Task` case class is shown below.
 
@@ -97,7 +97,7 @@ object DataModel {
 }
 ```
 
-The case class represent a `Task` datatype with six fields. This will map to a task table that will store a list of tasks that a user has to perform. As you can see, we have used different datatypes like String, Java 8 LocalDateTime, Set, and Long. LocalDateTime is part of Java 8 Date Time API. We have also given default values to some of these fields. This will allow us to not pass these value when we are constructing task objects. So, we can create a task by just giving `title` and `dueBy` values.
+The case class represent a `Task` datatype with six fields. This will map to a task table that will store a list of tasks that a user has to perform. As you can see, we have used different datatypes like String, Java 8 LocalDateTime, Set, and Long. LocalDateTime is part of Java 8 Date Time API. We have also given default values to some of these fields. This will allow us to not pass these value when we are constructing task objects. So, we can create a task by just providing `title` and `dueBy` values.
 
 > **Please refer to [my Java 8 tutorial](https://github.com/shekhargulati/java8-the-missing-tutorial/blob/master/08-date-time-api.md) if you are new to Java 8**
 
@@ -172,7 +172,7 @@ object ColumnDataMapper {
 
 In the code shown above, we have defined two mapper -- a) converts between `LocalDateTime` to `java.sql.Timestamp` and vice-versa b) converts between `Set[String]` to `String` and vice-versa.
 
-Now change the Table definition to use the new mappers as shown below.
+Now, update the table definition to use the new mappers as shown below.
 
 ```scala
 import datamodel.ColumnDataMapper.{localDateTimeColumnType, setStringColumnType}
@@ -327,7 +327,7 @@ The `listTasksAction` makes a `select "title", "description", "createdAt", "dueB
 
 ## Conclusion
 
-Slick is a powerful library to interact with relational databases. Today, we have just scratched the surface of this feature rich library. You leant how to define table definition, insert data, querying data. I will write two more blogs on Slick to cover it in more details.
+Slick is a powerful library to interact with relational databases. Today, we have just scratched the surface of this feature rich library. You leant how to define table definition, insert data, perform `select *` query. I will write couple more blogs on Slick to cover it in more details. So stay tuned!
 
 That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/6](https://github.com/shekhargulati/52-technologies-in-2016/issues/6).
 
