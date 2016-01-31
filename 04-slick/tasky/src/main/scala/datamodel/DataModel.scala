@@ -22,11 +22,11 @@ object DataModel {
 
     def description = column[String]("description")
 
-    def createdAt = column[LocalDateTime]("createdAt")(localDateTimeColumnType)
+    def createdAt = column[LocalDateTime]("createdAt")
 
-    def dueBy = column[LocalDateTime]("dueBy")(localDateTimeColumnType)
+    def dueBy = column[LocalDateTime]("dueBy")
 
-    def tags = column[Set[String]]("tags")(setStringColumnType)
+    def tags = column[Set[String]]("tags")
 
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
 

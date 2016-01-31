@@ -200,7 +200,7 @@ object ColumnDataMapper {
 
 In the code shown above, we have defined two mapper -- a) converts between `LocalDateTime` to `java.sql.Timestamp` and vice-versa b) converts between `Set[String]` to `String` and vice-versa.
 
-Now, update the table definition to use the new mappers as shown below.
+Now, add the import for your custom data mappings.
 
 ```scala
 import datamodel.ColumnDataMapper.{localDateTimeColumnType, setStringColumnType}
@@ -210,11 +210,11 @@ class TaskTable(tag: Tag) extends Table[Task](tag, "tasks") {
 
   def description = column[String]("description")
 
-  def createdAt = column[LocalDateTime]("createdAt")(localDateTimeColumnType)
+  def createdAt = column[LocalDateTime]("createdAt")
 
-  def dueBy = column[LocalDateTime]("dueBy")(localDateTimeColumnType)
+  def dueBy = column[LocalDateTime]("dueBy")
 
-  def tags = column[Set[String]]("tags")(setStringColumnType)
+  def tags = column[Set[String]]("tags")
 
   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
 
