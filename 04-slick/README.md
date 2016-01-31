@@ -5,6 +5,8 @@ Welcome to the fourth blog of [52-technologies-in-2016](https://github.com/shekh
 
 The core idea behind Slick is that as a developer you don't have to write SQL queries. Instead, library will create SQL for you if you build the query using the constructs provided by the library.
 
+<img src="http://slick.typesafe.com/resources/images/slick-logo.png">
+
 Benefits of using slick:
 
 1. Type safety and compile time checking
