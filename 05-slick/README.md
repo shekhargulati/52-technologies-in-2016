@@ -369,4 +369,4 @@ Today, we looked at how we can use the Slick library to query our data. If you h
 
 That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/7](https://github.com/shekhargulati/52-technologies-in-2016/issues/7).
 
-[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/04-slick)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/05-slick)](https://github.com/igrigorik/ga-beacon)
