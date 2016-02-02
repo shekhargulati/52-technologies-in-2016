@@ -54,3 +54,6 @@ I googled `python abc.py` and found out that there `abc.py` in the core Python l
 > **This module provides the infrastructure for defining abstract base classes (ABCs) in Python, as outlined in PEP 3119; see the PEP for why this was added to Python.**
 
 When we imported our `abc.py` Python basically imported `abc` module of Python core. So, it never imported our code. This is the reason `hello` method was not available on `abc`.
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/05-1-python-abc)](https://github.com/igrigorik/ga-beacon)
