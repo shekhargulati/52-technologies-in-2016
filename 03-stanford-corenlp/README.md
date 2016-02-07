@@ -17,7 +17,7 @@ The code for today’s demo application is available on github: [sentiment-analy
 
 ## Getting Started
 
-Start by creating a new directory `sentiment-analyzer` at a convenient location on your filesytem. This directory will house the source code of our application.
+Start by creating a new directory `sentiment-analyzer` at a convenient location on your filesystem. This directory will house the source code of our application.
 
 ```bash
 $ mkdir sentiment-analyzer

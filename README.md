@@ -22,6 +22,8 @@ Below is the list of technologies covered in this series:
 
 5. **[Week 5: January 31, 2016](./05-slick)** [Slick: Functional Relational Mapping for Mere Mortals Part 2: Querying Data](./05-slick/README.md). In this tutorial, we will learn how to perform `select` queries with Slick. Slick allows you to work with database tables in the same way as you work with Scala collections. This means that you can use methods like `map`, `filter`, `sort`, etc. to process data in your table.
 
+6. **[Week 6: February 7, 2016](./06-okhttp)** [Building A Lightweight REST API Client with Scala and OkHttp](./06-okhttp/README.md). In this tutorial, we will learn how to build REST API client for Medium's REST API using Scala and OkHttp. OkHttp is an open source Java HTTP client library focussed on efficiency.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
