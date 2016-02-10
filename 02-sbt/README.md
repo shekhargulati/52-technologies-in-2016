@@ -349,6 +349,8 @@ libraryDependencies += groupID % artifactID % version % configuration
 
 Let's write a test for `TaskManager` `allTasksDueToday` method. There are various testing styles that you can use with `scalatest`. In this tutorial, I am using `FlatSpec` style. You can refer to [scalatest documentation for more information](http://www.scalatest.org/user_guide/selecting_a_style).
 
+Create `src/test/scala/TaskManagerSpec.scala` and add the following code to it.
+
 ```scala
 import org.scalatest._
 
