@@ -1,0 +1,20 @@
+<div class="list">
+  {{ partial "default_head.html" . }}
+  <div class="row">
+    <div class="col-sm-9">
+
+      <header class="title"><h1>{{ .Title }}</h1></header>
+
+      {{ range $key, $value := .Data.Terms }}
+      <a href="/{{ $.Data.Plural }}/{{ $key | urlize }}/" class="{{ $.Data.Singular }}">{{ $key }}</a>
+      {{ end }}
+
+    </div>
+
+    <div class="col-sm-3">
+      {{ partial "sidebar.html" . }}
+    </div>
+
+  </div>
+  {{ partial "default_foot.html" . }}
+</div>

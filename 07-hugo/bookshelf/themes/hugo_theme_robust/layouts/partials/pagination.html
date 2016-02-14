@@ -1,0 +1,11 @@
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<nav class="paging">
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}" class="left" rel="prev">PREV</a>
+  {{ end }}
+
+  {{ if .Paginator.HasNext }}
+  <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}" class="right" rel="next">NEXT</a>
+  {{ end }}
+</nav>
+{{ end }}

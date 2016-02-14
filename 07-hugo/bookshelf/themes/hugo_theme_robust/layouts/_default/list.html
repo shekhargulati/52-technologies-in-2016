@@ -1,0 +1,28 @@
+<div class="list">
+  {{ partial "default_head.html" . }}
+  <div class="row">
+    <div class="col-sm-9">
+
+      <header class="title"><h1>{{ .Title }}</h1></header>
+
+      <div class="articles">
+        <div class="row">
+          {{ range (.Paginate .Data.Pages).Pages }}
+          <div class="col-sm-4">
+            {{ .Render "li" }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ partial "pagination.html" . }}
+
+    </div>
+
+    <div class="col-sm-3">
+      {{ partial "sidebar.html" . }}
+    </div>
+
+  </div>
+  {{ partial "default_foot.html" . }}
+</div>

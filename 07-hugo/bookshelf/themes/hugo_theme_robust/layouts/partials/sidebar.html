@@ -1,0 +1,54 @@
+<aside class="site">
+
+  {{ if and .IsPage (ne .Params.toc false) }}
+  <div class="section">
+    <header><div class="title">TableOfContents</div></header>
+    <div class="list-default">{{ .TableOfContents }}</div>
+  </div>
+  {{ end }}
+
+  {{ if ne (len .Site.Menus) 0 }}
+  <div class="section menu">
+    <header><div class="title">Menu</div></header>
+
+    {{ range .Site.Menus }}
+    <ul>
+      {{ range . }}
+      <li>
+        {{ if .HasChildren }}
+        <a href="#">{{ .Pre }} {{ .Name }}</a>
+        <ul>
+          {{ range .Children }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </li>
+      {{ else }}
+      <li><a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a></li>
+      {{ end }}
+      {{end}}
+    </ul>
+    {{end}}
+
+  </div>
+  {{ end }}
+
+  <div class="section">
+    <header><div class="title">LatestPosts</div></header>
+    <div class="content">
+      {{ range first 10 .Site.Pages }}
+      <div class="sm">{{ .Render "li" }}</div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ range $key, $value := .Site.Taxonomies }}
+  <div class="section taxonomies">
+    <header><div class="title">{{ $key | singularize }}</div></header>
+    <div class="content">
+      {{ range first 10 $value.ByCount }}<a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+</aside>

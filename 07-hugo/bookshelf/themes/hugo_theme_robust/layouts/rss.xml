@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }} </title>
+    <link>{{ .Permalink }}</link>
+    <language>en-us</language>
+    <author>{{ .Site.Params.Author }}</author>
+    <rights>(C) {{ .Site.LastChange.Year }}</rights>
+    <updated>{{ .Date }}</updated>
+
+    {{ range .Data.Pages }}
+      {{ if eq .Type "post"}}
+        <item>
+          <title>{{ .Title }}</title>
+          <link>{{ .Permalink }}</link>
+          <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+          <author>{{ .Site.Params.Author }}</author>
+          <guid>{{ .Permalink }}</guid>
+          <description>{{ .Content | html }}</description>
+        </item>
+      {{ end }}
+    {{ end }}
+
+  </channel>
+</rss>

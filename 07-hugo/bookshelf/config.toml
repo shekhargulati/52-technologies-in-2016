@@ -1,0 +1,8 @@
+baseurl = "https://shekhargulati.github.io/bookshelf/"
+languageCode = "en-us"
+title = "Shekhar Gulati Bookshelf"
+
+[Params]
+  Author = "Shekhar Gulati"
+  disqusShortname = "shekhargulati"
+  GoogleAnalyticsUserID = "UA-73784822-1"

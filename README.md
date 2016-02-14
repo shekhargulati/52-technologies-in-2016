@@ -24,6 +24,8 @@ Below is the list of technologies covered in this series:
 
 6. **[Week 6: February 7, 2016](./06-okhttp)** [Building A Lightweight REST API Client with Scala and OkHttp](./06-okhttp/README.md). In this tutorial, we will learn how to build REST API client for Medium's REST API using Scala and OkHttp. OkHttp is an open source Java HTTP client library focussed on efficiency.
 
+7. **[Week 7: February 14, 2016](./07-hugo)** [Hugo: A Modern WebSite Engine That Just Works](./07-hugo/README.md). In this tutorial, we will learn how to build a static website using Hugo. Hugo is a static site generator written in Go programming language.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 

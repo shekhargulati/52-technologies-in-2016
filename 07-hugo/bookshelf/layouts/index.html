@@ -1,0 +1,22 @@
+<div class="index">
+  {{ partial "default_head.html" . }}
+  <div class="row">
+    <div class="col-sm-9">
+
+      <div class="articles">
+        <div class="row">
+          {{ range $key, $value := .Paginator.Pages }}
+          <div class="col-sm-{{ if lt $key 4 }}6{{ else }}4{{ end }}">
+            {{ .Render "li" }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ partial "pagination.html" . }}
+
+    </div>
+
+  </div>
+  {{ partial "default_foot.html" . }}
+</div>

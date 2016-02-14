@@ -1,0 +1,26 @@
+BaseURL: "http://example.com"
+LanguageCode: "en-us"
+Title: "Robust"
+
+Params:
+  Author: "Your name."
+  Birth: "Sun, Feb 26, 1989"
+  DateForm: "Mon, Jan 2, 2006"
+  GoogleAnalyticsUserID: "Your ID."
+  GravatarHash: "Your Hash."
+  Facebook: "Your ID."
+  Twitter: "Your ID."
+  Github: "Your ID."
+  Disqus: "Your Disqus."
+  SyntaxHighlightTheme: "solarized_dark.min.css"
+  ShowRelatedPost: True
+  ShowTagCloud: True
+
+Indexes:
+  tag: "tags"
+
+permalinks:
+  post: /blog/:year/:month/:day/:title/
+
+MetadataFormat: "yaml"
+
