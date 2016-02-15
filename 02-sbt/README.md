@@ -3,7 +3,7 @@ SBT: The Missing Tutorial
 
 Welcome to the second blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. From last year, I have started using Scala as my main programming language. One of the tools that you have to get used to while working with a programming language is a build tool. In my office projects, we use Gradle for all our projects be it Scala or Java. In most of my personal Scala projects, I have started using `sbt` as my preferred build tool. **`sbt` is a general purpose build tool written in Scala**. Most of the time we try to hack our way while using a build tool never learning it properly. As Scala will be the language that I will cover most in this series, I decided to thoroughly learn `sbt` this week. We(developers) often underestimate the importance of learning a build tool thoroughly and end up not using build tool in the most effective way. Good working knowledge of a build tool can make us more productive so we should take it seriously.
 
-> This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)
+> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
 ## Table of Contents
 
