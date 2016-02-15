@@ -3,7 +3,7 @@ package datamodel
 import java.sql.Timestamp
 import java.time.LocalDateTime
 
-import datamodel.ColumnDataMapper.{localDateTimeColumnType, setStringColumnType}
+import datamodel.ColumnDataMapper._
 import slick.driver.H2Driver.api._
 
 
@@ -22,11 +22,11 @@ object DataModel {
 
     def description = column[String]("description")
 
-    def createdAt = column[LocalDateTime]("createdAt")
+    def createdAt = column[LocalDateTime]("createdAt")(localDateTimeColumnType)
 
-    def dueBy = column[LocalDateTime]("dueBy")
+    def dueBy = column[LocalDateTime]("dueBy")(localDateTimeColumnType)
 
-    def tags = column[Set[String]]("tags")
+    def tags = column[Set[String]]("tags")(setStringColumnType)
 
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
 
