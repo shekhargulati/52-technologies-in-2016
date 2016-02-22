@@ -26,6 +26,8 @@ Below is the list of technologies covered in this series:
 
 7. **[Week 7: February 14, 2016](./07-hugo)** [Hugo: A Modern WebSite Engine That Just Works](./07-hugo/README.md). In this tutorial, we will learn how to build a static website using Hugo. Hugo is a static site generator written in Go programming language.
 
+8. **[Week 8: February 21, 2016](./08-coreos)** [CoreOS for Application Developers](./08-coreos/README.md). The goal of this tutorial is to help application developers understand why they should care about CoreOS and show them how to work with CoreOS cluster running on top of Amazon EC2. CoreOS is an Open source Linux distribution built to run and manage highly scalable and fault tolerant systems.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
