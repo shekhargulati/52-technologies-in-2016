@@ -1,4 +1,4 @@
-52 technologies in 2016
+52 technologies in 2016 [![GitHub Stats](https://img.shields.io/badge/github-stats-brightgreen.svg)](http://githubstats.com/shekhargulati/52-technologies-in-2016)
 --------
 
 I have taken a challenge to learn a new technology every week in 2016. The goal is to learn a new technology, build a simple application using it, and blog about it.
