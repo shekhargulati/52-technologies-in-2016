@@ -1,0 +1,328 @@
+{
+  "angerLikelihood": "VERY_UNLIKELY",
+  "blurredLikelihood": "VERY_UNLIKELY",
+  "boundingPoly": {
+    "vertices": [
+      {
+        "x": 1534,
+        "y": 159
+      },
+      {
+        "x": 1821,
+        "y": 159
+      },
+      {
+        "x": 1821,
+        "y": 493
+      },
+      {
+        "x": 1534,
+        "y": 493
+      }
+    ]
+  },
+  "detectionConfidence": 0.9995242,
+  "fdBoundingPoly": {
+    "vertices": [
+      {
+        "x": 1569,
+        "y": 245
+      },
+      {
+        "x": 1789,
+        "y": 245
+      },
+      {
+        "x": 1789,
+        "y": 464
+      },
+      {
+        "x": 1569,
+        "y": 464
+      }
+    ]
+  },
+  "headwearLikelihood": "VERY_UNLIKELY",
+  "joyLikelihood": "VERY_LIKELY",
+  "landmarkingConfidence": 0.64031124,
+  "landmarks": [
+    {
+      "position": {
+        "x": 1643.347,
+        "y": 318.13702,
+        "z": -4.753362E-4
+      },
+      "type": "LEFT_EYE"
+    },
+    {
+      "position": {
+        "x": 1728.9514,
+        "y": 315.09427,
+        "z": 9.495166
+      },
+      "type": "RIGHT_EYE"
+    },
+    {
+      "position": {
+        "x": 1610.0543,
+        "y": 303.5824,
+        "z": 3.7295928
+      },
+      "type": "LEFT_OF_LEFT_EYEBROW"
+    },
+    {
+      "position": {
+        "x": 1666.073,
+        "y": 302.90125,
+        "z": -16.318792
+      },
+      "type": "RIGHT_OF_LEFT_EYEBROW"
+    },
+    {
+      "position": {
+        "x": 1708.9219,
+        "y": 299.90326,
+        "z": -11.835677
+      },
+      "type": "LEFT_OF_RIGHT_EYEBROW"
+    },
+    {
+      "position": {
+        "x": 1757.9265,
+        "y": 296.3871,
+        "z": 19.386026
+      },
+      "type": "RIGHT_OF_RIGHT_EYEBROW"
+    },
+    {
+      "position": {
+        "x": 1688.3384,
+        "y": 319.3402,
+        "z": -13.357309
+      },
+      "type": "MIDPOINT_BETWEEN_EYES"
+    },
+    {
+      "position": {
+        "x": 1692.4175,
+        "y": 371.542,
+        "z": -32.907703
+      },
+      "type": "NOSE_TIP"
+    },
+    {
+      "position": {
+        "x": 1690.6069,
+        "y": 399.52835,
+        "z": -9.388818
+      },
+      "type": "UPPER_LIP"
+    },
+    {
+      "position": {
+        "x": 1691.3741,
+        "y": 428.58008,
+        "z": 0.27963614
+      },
+      "type": "LOWER_LIP"
+    },
+    {
+      "position": {
+        "x": 1650.1881,
+        "y": 410.75372,
+        "z": 12.415997
+      },
+      "type": "MOUTH_LEFT"
+    },
+    {
+      "position": {
+        "x": 1725.9355,
+        "y": 405.6969,
+        "z": 19.853842
+      },
+      "type": "MOUTH_RIGHT"
+    },
+    {
+      "position": {
+        "x": 1690.7727,
+        "y": 412.63086,
+        "z": -1.4059759
+      },
+      "type": "MOUTH_CENTER"
+    },
+    {
+      "position": {
+        "x": 1712.815,
+        "y": 371.5016,
+        "z": 3.4994051
+      },
+      "type": "NOSE_BOTTOM_RIGHT"
+    },
+    {
+      "position": {
+        "x": 1664.2583,
+        "y": 376.5078,
+        "z": -1.4644238
+      },
+      "type": "NOSE_BOTTOM_LEFT"
+    },
+    {
+      "position": {
+        "x": 1690.7123,
+        "y": 383.2276,
+        "z": -11.641196
+      },
+      "type": "NOSE_BOTTOM_CENTER"
+    },
+    {
+      "position": {
+        "x": 1643.5625,
+        "y": 315.73096,
+        "z": -6.327764
+      },
+      "type": "LEFT_EYE_TOP_BOUNDARY"
+    },
+    {
+      "position": {
+        "x": 1661.504,
+        "y": 321.86572,
+        "z": 2.452986
+      },
+      "type": "LEFT_EYE_RIGHT_CORNER"
+    },
+    {
+      "position": {
+        "x": 1642.8551,
+        "y": 325.0818,
+        "z": -0.09066931
+      },
+      "type": "LEFT_EYE_BOTTOM_BOUNDARY"
+    },
+    {
+      "position": {
+        "x": 1624.4496,
+        "y": 320.87357,
+        "z": 6.224466
+      },
+      "type": "LEFT_EYE_LEFT_CORNER"
+    },
+    {
+      "position": {
+        "x": 1642.0294,
+        "y": 321.40692,
+        "z": -2.3310559
+      },
+      "type": "LEFT_EYE_PUPIL"
+    },
+    {
+      "position": {
+        "x": 1729.2927,
+        "y": 311.8835,
+        "z": 3.1165946
+      },
+      "type": "RIGHT_EYE_TOP_BOUNDARY"
+    },
+    {
+      "position": {
+        "x": 1745.3657,
+        "y": 315.3733,
+        "z": 19.397648
+      },
+      "type": "RIGHT_EYE_RIGHT_CORNER"
+    },
+    {
+      "position": {
+        "x": 1730.0469,
+        "y": 321.18,
+        "z": 9.41447
+      },
+      "type": "RIGHT_EYE_BOTTOM_BOUNDARY"
+    },
+    {
+      "position": {
+        "x": 1712.336,
+        "y": 319.4284,
+        "z": 8.159104
+      },
+      "type": "RIGHT_EYE_LEFT_CORNER"
+    },
+    {
+      "position": {
+        "x": 1729.9996,
+        "y": 317.4588,
+        "z": 7.2813854
+      },
+      "type": "RIGHT_EYE_PUPIL"
+    },
+    {
+      "position": {
+        "x": 1639.5662,
+        "y": 291.88696,
+        "z": -14.020154
+      },
+      "type": "LEFT_EYEBROW_UPPER_MIDPOINT"
+    },
+    {
+      "position": {
+        "x": 1732.6587,
+        "y": 287.66702,
+        "z": -3.7664485
+      },
+      "type": "RIGHT_EYEBROW_UPPER_MIDPOINT"
+    },
+    {
+      "position": {
+        "x": 1576.9946,
+        "y": 355.6648,
+        "z": 104.98196
+      },
+      "type": "LEFT_EAR_TRAGION"
+    },
+    {
+      "position": {
+        "x": 1772.6978,
+        "y": 345.50574,
+        "z": 125.82507
+      },
+      "type": "RIGHT_EAR_TRAGION"
+    },
+    {
+      "position": {
+        "x": 1687.5614,
+        "y": 300.04626,
+        "z": -17.656202
+      },
+      "type": "FOREHEAD_GLABELLA"
+    },
+    {
+      "position": {
+        "x": 1691.262,
+        "y": 465.7209,
+        "z": 16.377066
+      },
+      "type": "CHIN_GNATHION"
+    },
+    {
+      "position": {
+        "x": 1592.9967,
+        "y": 412.50565,
+        "z": 76.95209
+      },
+      "type": "CHIN_LEFT_GONION"
+    },
+    {
+      "position": {
+        "x": 1768.9939,
+        "y": 404.56512,
+        "z": 96.339745
+      },
+      "type": "CHIN_RIGHT_GONION"
+    }
+  ],
+  "panAngle": 6.319743,
+  "rollAngle": -1.8814136,
+  "sorrowLikelihood": "VERY_UNLIKELY",
+  "surpriseLikelihood": "VERY_UNLIKELY",
+  "tiltAngle": -6.42992,
+  "underExposedLikelihood": "VERY_UNLIKELY"
+}
