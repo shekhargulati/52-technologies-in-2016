@@ -26,6 +26,8 @@ Now, that we have understood what we are going to build today let's get started.
 3. Get Twitter application connection credentials. Create a new Twitter application at [https://apps.twitter.com/](https://apps.twitter.com/). This will give you the required credentials that you need to connect to Twitter API. At the end, you will have access to consumer key, consumer secret, access token, and access token secret.
 4. Basic knowledge of RxJava is required. You can refer to [my RxJava tutorial](http://blog.xebia.in/2015/09/01/day1-building-an-application-from-scratch-using-rxjava-and-java8/) in case you are new to it.
 
+> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
+
 ## Step 1: Create a Java Gradle project
 
 Google Cloud Vision API exposes its REST API so you can build your application using any programming language. Google officially provide SDK for Java and Python. We will use Java SDK in this tutorial. Navigate to a convenient location on your file system and create a Gradle project with name ***people-counter***. You can scaffold a Gradle project using your IDE. Once project is created, open the `build.gradle` file and populate it with following contents.  
