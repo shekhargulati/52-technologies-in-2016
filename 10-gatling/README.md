@@ -1,11 +1,13 @@
 Gatling: The Ultimate Load Testing Tools for Programmers
 --------
 
-**Gatling** is a high performance open source **load testing** tool built on top of Scala, Netty, and Akka. It is a next generation, modern load testing tools very different from existing tools like Apache JMeter. **[Load testing](https://en.wikipedia.org/wiki/Load_testing)** is conducted to understand behavior of an application under load. You put load on the application by simulating users and measure its response time to understand how application will behave under both normal and anticipated peak load conditions.
+Welcome to the tenth blog of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)  blog series. **Gatling** is a high performance open source **load testing** tool built on top of Scala, Netty, and Akka. It is a next generation, modern load testing tools very different from existing tools like Apache JMeter. **[Load testing](https://en.wikipedia.org/wiki/Load_testing)** is conducted to understand behavior of an application under load. You put load on the application by simulating users and measure its response time to understand how application will behave under both normal and anticipated peak load conditions.
 
 Gatling can be used to load test your HTTP server. HTTP is not the only protocol that one can load test with Gatling. Gatling also has inbuilt support for Web Socket and JMS protocols. You can extend Gatling to support your protocol of choice.
 
 Load testing is often neglected by most software teams resulting in poor understanding of their application performance characteristics. These days most software teams take unit testing and functional testing seriously but still they ignore load testing. They write unit tests, integration tests, and functional tests and integrate them in their software build. I think part of the reason developer still don't write load tests has to do with the fact that most load testing tools are GUI based so you can't code your load tests. They allow you to export your load test as XML.
+
+> **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
 ## Why Gatling?
 
