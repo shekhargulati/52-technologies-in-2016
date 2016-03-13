@@ -32,6 +32,8 @@ Below is the list of technologies covered in this series:
 
 10. **[Week 10: March 06, 2016](./10-gatling)** [Gatling: The Ultimate Load Testing Tools for Programmers](./10-gatling/README.md). Gatling is a high performance open source **load testing** tool built on top of Scala, Netty, and Akka. It is a next generation, modern load testing tools very different from existing tools like Apache JMeter. In this tutorial, you will learn how to write load tests using Gatling.
 
+11. **[Week 11: March 13, 2016](./11-tweet-deduplication)** [Tweet Deduplication](./11-tweet-deduplication/README.md). This week I decided to write a tweet deduplication library. The library will give you a stream of deduplicated tweets.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
