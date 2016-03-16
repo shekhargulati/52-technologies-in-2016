@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>Sentiment Analyzer: Built using Text Blob</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+	<style type="text/css">
+    body {
+      padding-top:60px;
+      padding-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Text Sentiment Analyzer</a>
+        </div>
+
+    </div>
+  </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<textarea class="form-control" rows="3" placeholder="Write text to see sentiment analysis in action. Write minimum 10 charaters and press button."></textarea>
+			</div>
+			<div class="row">
+				<br><br>
+				<button class="btn-lg btn-warning">Perform Sentiment Analysis</button>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p id="result"></p>
+		</div>
+	</div>
+<br><br>
+	<div class="row">
+		<p>This application was built as part of <a href="https://github.com/shekhargulati/52-technologies-in-2016/" target="_blank">52 Technologies in 2016</a> blog series. Look what all I have learnt in 2016 <a href="https://github.com/shekhargulati/52-technologies-in-2016/" target="_blank">https://github.com/shekhargulati/52-technologies-in-2016/</a></p>
+	</div>
+<br><br><br><br>
+	<footer id="footer">
+				<p>&copy; Shekhar Gulati 2016</p>
+
+				<p>
+					Made with love by <a href="https://twitter.com/shekhargulati/"
+						target="_blank">Shekhar Gulati</a>. Contact him at <a
+						href="mailto:shekhargulati84@gmail.com">shekhargulati84@gmail.com</a>.
+				</p>
+			</footer>
+</div>
+
+
+
+
+<script type="text/javascript" src="static/js/jquery.js"></script>
+<script type="text/javascript">
+
+	$("button").click(function(){
+		var messageTxt = $('textarea').val();
+		$('#result').removeClass("alert alert-warning");
+		$('#result').removeClass("alert alert-danger");
+		$('#result').removeClass("alert alert-success");
+		if (messageTxt.length > 10){
+
+			$.post('/api/sentiment',{message: messageTxt},function(result){
+				if(result.polarity < 0.0){
+					console.log('less than 0');
+					$('#result').addClass("alert alert-danger")	.text(messageTxt);
+				} else if( result.polarity >= 0.0 && result.polarity <= 0.5){
+					console.log('between 0 and 0.5');
+					$('#result').addClass("alert alert-warning").text(messageTxt);
+				}else{
+					console.log('Greater than 0.5');
+					$('#result').addClass("alert alert-success").text(messageTxt);
+				}
+
+});
+	}
+});
+
+
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75130811-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

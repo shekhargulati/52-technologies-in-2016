@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+export NLTK_DATA=$OPENSHIFT_DATA_DIR
+echo "YOU ARE IN PRE_START HOOK"
+echo $NLTK_DATA
+. $VIRTUAL_ENV/bin/activate
+pip install textblob
+python -m textblob.download_corpora
