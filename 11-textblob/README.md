@@ -11,7 +11,7 @@ In this blog, I will talk about a Python package called [TextBlob](https://textb
 
 ## What is TextBlob?
 
-In this blog, I will talk about a Python package called [TextBlob](https://textblob.readthedocs.org/en/) is an open source text processing library written in Python. It can be used to perform various natural language processing tasks such as part-of-speech tagging, noun-phrase extraction, sentiment analysis, text translation, and many more. You can read about all the features supported by TextBlog in the official [documentation](https://textblob.readthedocs.org/en/).
+In this blog, I will talk about a Python package called [TextBlob](https://textblob.readthedocs.org/en/). TextBlob is an open source text processing library written in Python. It can be used to perform various natural language processing tasks such as part-of-speech tagging, noun-phrase extraction, sentiment analysis, text translation, and many more. You can read about all the features supported by TextBlog in the official [documentation](https://textblob.readthedocs.org/en/).
 TextBlob stands on strong shoulders of [NTLK](http://www.nltk.org/), which is the leading platform for building Python programs to work with human language data.
 
 ## Prerequisite
@@ -87,10 +87,15 @@ if __name__ == "__main__":
 ```
 
 The code shown above does the following:
+
 1. It imports the Flask class, `jsonify` function, and `render_template` function from `flask` package.
+
 2. It imports the `TextBlob` class from `textblob` package.
+
 3. It defines a route to `/` and `index` url. So, if a user makes a GET request to either `/` or `/index`, then the index.html will be rendered.
+
 4. It defines a route to `/api/sentiment/` url. The is a placeholder and will contain the text message the user want to run sentiment analysis on. We create an instance of TextBlob passing it the message. Next, we get polarity and subjectivity of the message, and then create a json object and return it back.
+
 5. Finally, we start the development server to run the application using the python `sentimentanalyzer.py` command. We also enabled debugging by passing Debug=True. Debugging provides an interactive debugger in the browser when an unexpected exceptions occur. Another benefit of the debugger is that it will automatically reload the changes. We can keep the debugger running in the background and work through our application. This provides a highly productive environment.
 
 
