@@ -40,6 +40,8 @@ Below is the list of technologies covered in this series:
 
 13. **[Week 13: March 27, 2016](./13-arangodb/README.md)** [ArangoDB: Polyglot Persistence Without Cost](./13-arangodb/README.md). ArangoDB is an open source NoSQL database that provides flexible data model. You can use ArangoDB to model data using combination of document, graph, and key value data modeling styles.
 
+14. **[Week 14: April 03, 2016](./14-kafka/README.md)** [Apache Kafka](./14-kafka/README.md). I have not yet written this article.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
