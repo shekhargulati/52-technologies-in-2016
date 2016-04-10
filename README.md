@@ -42,6 +42,8 @@ Below is the list of technologies covered in this series:
 
 14. **[Week 14: April 03, 2016](./14-kafka/README.md)** [Apache Kafka](./14-kafka/README.md). I have not yet written this article.
 
+15. **[Week 15: April 10, 2016](./15-huginn/README.md)** [Airline Bot Platform with Huginn](./15-huginn/README.md). This week I decided to build a bot platform using **Huginn** that can perform a lot of tasks for which we normally use mobile apps. Our goal was to show them that they should think beyond mobile apps and look into the world of bots as bots can be less intrusive, more secure, and does not require installation. Apps are dead, long live bots.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
