@@ -249,7 +249,7 @@ You can view the event flow by clicking the `View diagram` link on the `agents` 
 
 ![](images/huginn-agent-event-flow.png)
 
-To see all the three agents in action, let's add couple more JSON documents to the `db.json`. These JSON will contains `SCREENED` and `LOADED_ON_AIRCRAFT` events.
+To see all the three agents in action, let's add couple of more JSON documents to the `db.json`. These JSON will contain `SCREENED` and `LOADED_ON_AIRCRAFT` events.
 
 You will notice that bag tracking bot has published three events and you will start getting email and SMS.
 
