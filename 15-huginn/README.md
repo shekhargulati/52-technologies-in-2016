@@ -1,9 +1,9 @@
 Airline Bot Platform with Huginn
 -----
 
-Welcome to fifteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I participated in a day long Hackathon organized by an Airline. They were looking for ideas that could help improve customer travel experience. I, along with my good friend [Rahul](https://www.linkedin.com/in/rahul-sharma-72531111) decided to build a bot platform using [Huginn](https://github.com/cantino/huginn) that can perform a lot of tasks for which we normally use mobile apps. Our goal was to show them that they should think beyond mobile apps and look into the world of bots as bots can be less intrusive, more secure, and does not require installation. ***Apps are dead, long live bots.***
+Welcome to fifteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I participated in a day long Hackathon organized by an Airline. They were looking for ideas that could help improve their customer travel experience. I, along with my good friend [Rahul](https://www.linkedin.com/in/rahul-sharma-72531111) decided to build a bot platform using [Huginn](https://github.com/cantino/huginn) that can perform a lot of tasks for which we normally use mobile apps. Our goal was to show them that they should think beyond mobile apps and look into the world of bots as bots can be less intrusive, more secure, and does not require installation. ***Apps are dead, long live bots.***
 
-Bots are small applications that can perform certain tasks on user behalf, or react to events, or send notifications. To show them power of bots, we decided to build a bag tracking system using bots that sends an SMS notification to the passenger as soon as flight lands with information about whether their bag was loaded in the same flight or not. We integrated our bots platform with a mock checkin system so as soon as the passenger checks in, a bot is created for the passenger that tracks their bag journey. I find it very annoying that after waiting for an hour or more at the airport conveyer belt I am told that my bag was not loaded in the same flight. I have lost my bag three times at three different international airports Heathrow Airport London, Adolfo Suárez Madrid–Barajas Airport, and Amsterdam Airport Schiphol and each time I had to go through the painful process.
+Bots are small applications that can perform certain tasks on user's behalf, or react to events, or send notifications. To show them the power of bots, we decided to build a bag tracking system using bots that sends an SMS notification to the passenger as soon as the flight lands with information  whether their bag was loaded in the same flight or not. We integrated our bots platform with a mock checkin system so as soon as the passenger checks in, a bot is created for the passenger that tracks their bag journey. I find it very annoying that after waiting for an hour or more at the airport conveyer belt, I am told that my bag was not loaded in the same flight. I have lost my bag three times at three different international airports Heathrow Airport London, Adolfo Suárez Madrid–Barajas Airport, and Amsterdam Airport Schiphol and each time I had to go through the painful process.
 
 > **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016).**
 
@@ -15,15 +15,15 @@ In my opinion, the biggest advantage of using bots is that they can have a defin
 
 There are many use cases that bots can be used for. These are some of the use cases that I can think of right now:
 
-1. A bot that tracks flight arrival information, books a taxi, informs the driver, and send an SMS to passenger with driver details.
-2. A bot that tracks flight information and send notifications to the loved ones about the journey.
+1. A bot that tracks flight arrival information, books a taxi, informs the driver, and sends an SMS to the passenger with driver details.
+2. A bot that tracks flight information and sends notifications to the loved ones about the journey.
 3. A bot that sends you an email with your ticket 2 hours before your flight.
-4. A bot that listen to baggage lost Twitter stream for an airline and auto reply to the frustrated user with a personalized message.
+4. A bot that listens to baggage lost Twitter stream for an airline and auto reply to the frustrated user with a personalized message.
 5. A bot that sends me an email with a list of 10 articles(you can scrape the article content) based on my twitter favorites or any other read it later app that I can read during the flight.
 
 ## Building a bot platform
 
-In this section, I will showcase how we built baggage tracking system using Huginn. According to [Huginn website](https://github.com/cantino/huginn) ,
+In this section, I will showcase how we built the baggage tracking system using Huginn. According to [Huginn website](https://github.com/cantino/huginn) ,
 
 > **Huginn is a system for building agents that perform automated tasks for you online. They can read the web, watch for events, and take actions on your behalf. Huginn's Agents create and consume events, propagating them along a directed graph. Think of it as a hackable Yahoo! Pipes plus IFTTT on your own server. You always know who has your data. You do.**
 
@@ -64,7 +64,7 @@ Now, that Huginn is up and running we can connect it with the Airline checkin sy
 
 > **Huginn currently does not provide a REST API to perform various tasks like creating an Agent. So, we are submitting a form request.**
 
-Huginn supports many different kind of agents. There are agents to send notification like SMS and email, make POST request to other services, scheduler agent to take action at periodically, translation agent, user location agent, etc. You can also create your own agents in Ruby. To learn more about creating agents, you can refer to [documentation](https://github.com/cantino/huginn/wiki/Creating-a-new-agent).
+Huginn supports many different kind of agents. There are agents to send notifications like SMS and email, make POST request to other services, scheduler agent to take action periodically, translation agent, user location agent, etc. You can also create your own agents in Ruby. To learn more about creating agents, you can refer to [documentation](https://github.com/cantino/huginn/wiki/Creating-a-new-agent).
 
 We created a quick and dirty Python Flask application that renders a form as shown below.
 
@@ -125,7 +125,7 @@ In the code shown above, we are doing the following:
 1. using the Python `requests` API to submit the form programmatically.
 2. We set the request headers. As we are submitting a form so we are using content type as `application/x-www-form-urlencoded`.
 3. We created an agent using the customer name.
-4. In the `POST` request body, we set the agent type to `WebsiteAgent`. `WebsiteAgent` polls a URL periodically as defined by the `schedule` parameter and publish events. A agent can have options as defined in `agent_options` dictionary. We have defined `poll_url` to be `http://192.168.1.2:3000/bagInfo`. When bot/agent will hit this URL, it will return a JSON response with bag details. We will cover this later. The `extract` parameter inside the `agent_options` define what we want to extract from the JSON returned by `http://192.168.1.2:3000/bagInfo` endpoint. We are using JSONPath expression `$.[:-1].event[:-1].event_code`. The expression means get the last JSON document in the array, then within that document give me the last event, and from the event return me  the `event_code`. This will help us extract the last bag tracking event.
+4. In the `POST` request body, we set the agent type to `WebsiteAgent`. `WebsiteAgent` polls a URL periodically as defined by the `schedule` parameter and publish events. An agent can have options as defined in `agent_options` dictionary. We have defined `poll_url` to be `http://192.168.1.2:3000/bagInfo`. When bot/agent will hit this URL, it will return a JSON response with bag details. We will cover this later. The `extract` parameter inside the `agent_options` define what we want to extract from the JSON returned by `http://192.168.1.2:3000/bagInfo` endpoint. We are using JSONPath expression `$.[:-1].event[:-1].event_code`. The expression means get the last JSON document in the array, then within that document give me the last event, and from the event return me  the `event_code`. This will help us extract the last bag tracking event.
 5. Finally, we make the `POST` request to the Huginn server using the `request_data` and `headers`.
 
 ### Step 3: Submit checkin form to create agents
@@ -140,7 +140,7 @@ Bag Tracking bot will start making `GET` request to `http://192.168.1.2:3000/bag
 
 ### Step 4: Get bag tracking information
 
-During this Hackathon, I learnt that there is a provider SITA that provides real time information about bag information. They have a [Bag Journey API](https://www.developer.aero/BagJourney-API/API-Overview) that  provides a simple interface into the complex world of baggage management by allowing the retrieval of the real time status of a specific bag, a list of bags on a particular flight or a list of events that describe the journey of a checked in bag or list of bags. **BagJourney API access is only available to Airlines, Airports or their accredited software providers**. To demo our use case, we decided to use a mock REST server that returns JSON documents we specify. We used [json-server](https://github.com/typicode/json-server) as it is very easy to use and met our needs.
+During this Hackathon, I learnt that there is a provider SITA that provides real time information about bag information. They have a [Bag Journey API](https://www.developer.aero/BagJourney-API/API-Overview) that  provides a simple interface into the complex world of baggage management by allowing the retrieval of the real time status of a specific bag, a list of bags on a particular flight or a list of events that describe the journey of a checked in bag or list of bags. **BagJourney API access is only available to Airlines, Airports or their accredited software providers**. To demo our use case, we decided to use a mock REST server that returns JSON documents we specify. We used [json-server](https://github.com/typicode/json-server) as it is very easy to use and meet our needs.
 
 `json-server` is a node.js application that you can install using `npm` as shown below.
 
