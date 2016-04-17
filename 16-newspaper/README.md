@@ -1,7 +1,7 @@
 Building Your "Read It Later" App using Python and Newspaper Library
 ---
 
-Welcome to sixteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will show you how you can build a simple yet working **Read It Later** application. I rely on my Tweet feed for my daily reading recommendations. I check twitter several time during the day and whenever I find any article that interests me I like it so that I can read it later. In this tutorial, you will learn how we can use a Python library newspaper to perform article extraction and build our simple app.
+Welcome to sixteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will show you how you can build a simple yet working **Read It Later** application. I rely on my Tweet feed for my daily reading recommendations. I check twitter several time during the day and whenever I find any article that interests me I like it so that I can read it later. In this tutorial, you will learn how we can use a Python library [newspaper](https://github.com/codelucas/newspaper) to perform article extraction and build our simple app.
 
 Once application is developed, you will be able to see your Twitter favorites on the application index page.
 
