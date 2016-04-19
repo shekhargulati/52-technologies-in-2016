@@ -15,6 +15,26 @@ By the end of this tutorial, you will have a simple yet working application to v
 
 > **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
+## What is Newspaper?
+
+In this tutorial, I will talk about a Python package called [Newspaper](http://newspaper.readthedocs.org/). Newspaper is an open source news full-text and article metadata extraction library written in Python 3. It has a very easy to use API that can help you get started in minutes. It can be used to extract the main text of an article, main image of an article, videos in an article, meta description, and meta tags in an article. Newspaper stands on strong shoulders of `beautifulsoup4`, `lxml`, and `nltk` libraries.
+
+To extract text from a URL is as simple as shown below.
+
+```python
+>>> from newspaper import Article
+
+>>> url = 'http://firstround.com/review/the-remarkable-advantage-of-abundant-thinking/'
+>>> article = Article(url)
+>>> article.build()
+
+>>> article.title
+'The Remarkable Advantage of Abundant Thinking'
+
+>>> article.text.split('\n\n')[0]
+"If you consider yourself to be ambitious, this has happened to you. Your alarm goes off, and you're ambushed by thoughts of the grind ahead; finding that needle in a haystack; denting the universe; the roller coaster that never ends and many more horrible but unfortunately apt cliches. Today, the groupthink in tech largely believes that you have to suffer and barely survive to succeed. But this is a trap, says sought-after executive coach Katia Verresen, who counsels leaders at Facebook, Stanford, Airbnb, Twitter, and a number of prominent startups."
+```
+
 ## Prerequisite
 
 To follow this blog, you need to have following on your machine:
