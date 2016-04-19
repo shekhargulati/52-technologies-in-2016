@@ -1,4 +1,4 @@
-Building Your Own "Read It Later" App in an Hour
+Building `Read It Later` App with Python Newspaper Library
 -----
 
 Welcome to sixteenth week of [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I will show you how to build a simple yet working **Read It Later** application using Twitter likes (or favorites). I rely on my Twitter feed for my daily reading recommendations. I check Twitter several time during the day and whenever I find any article that interests me I like it so that I can read it later. In this tutorial, you will learn how to build such an application using Python programming language. We will make use of article extraction to extract relevant content from the urls.
@@ -9,7 +9,7 @@ To build this application, we will use following Python libraries:
 2. **Tweepy**: `Tweepy` is a very easy to use library that we will use to talk to Twitter streaming API. We will subscribe to a user's Twitter stream so as soon as user likes a tweet our application will be notified.
 3. **Newspaper**: [newspaper](https://github.com/codelucas/newspaper) is a great library to perform article extraction in Python. It makes use of popular Python libraries like `beautifulsoup4`, `lxml`, `nltk` to get the job done.
 
-By the end of this tutorial, you will have a simple yet working application to view articles based on your liked tweets that you wanted to read later. The following is a screenshot of the application. As you can see below, we extracted main image, summary text, and title from a url.
+By the end of this tutorial, you will have a simple yet working application to view articles that you wanted to read later. The following is the screenshot of our application. As you can see below, we extracted main image, summary text, and title from the url.
 
 ![](images/stories.jpg)
 
