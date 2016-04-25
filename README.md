@@ -46,6 +46,8 @@ Below is the list of technologies covered in this series:
 
 16. **[Week 16: April 17, 2016](./16-newspaper)** [Building Your "Read It Later" App using Python and Newspaper Library](./16-newspaper/README.md).In this tutorial, you will learn how we can use a Python library newspaper to perform article extraction and build a simple "Read It Later" application.
 
+17. **[Week 17: April 24, 2016](./17-typescript)** [Let's Learn TypeScript](./17-typescript/README.md). This week I decided to learn TypeScript so I will discuss how you can get started with TypeScript. TypeScript is a typed superset of JavaScript, which means that it supports all the JavaScript features plus it adds static typing to the language. 
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 

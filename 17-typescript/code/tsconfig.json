@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "outDir": "js",
+        "target": "es5",
+        "watch": true
+    }
+}
