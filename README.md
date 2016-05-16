@@ -50,7 +50,7 @@ Below is the list of technologies covered in this series:
 
 18. **[Week 18: May 01, 2016](./18-mesos)** [Getting Started with Apache Mesos](./18-mesos/README.md). This week we will learn about [Apache Mesos](http://mesos.apache.org/) -- an open source cluster manager and scheduler for your datacenter.
 
-19. **[Week 19: May 08, 2016](./18-bees)** [Load testing with bees](./19-bees/README.md). This week I discovered a Python utility called `beeswithmachineguns` that can load test a web application by launching many micro EC2 instances.
+19. **[Week 19: May 08, 2016](./19-bees)** [Load testing with bees](./19-bees/README.md). This week I discovered a Python utility called `beeswithmachineguns` that can load test a web application by launching many micro EC2 instances.
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
