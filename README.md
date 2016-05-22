@@ -52,6 +52,10 @@ Below is the list of technologies covered in this series:
 
 19. **[Week 19: May 08, 2016](./19-bees)** [Load testing with bees](./19-bees/README.md). This week I discovered a Python utility called `beeswithmachineguns` that can load test a web application by launching many micro EC2 instances.
 
+20. **[Week 20: May 15, 2016](#)** Not written yet.
+
+21. **[Week 21: May 22, 2016](./21-strman)** [Java 8 String Manipulation Library](./21-strman/README.md). This week I wrote and released a Java 8 library to work with String.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
