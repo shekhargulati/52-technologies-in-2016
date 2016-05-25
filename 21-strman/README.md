@@ -38,7 +38,7 @@ These are the available functions in current version of library:
 Appends Strings to value
 
 ```java
-import static strman.append
+import static strman.Strman.append
 append("f", "o", "o", "b", "a", "r")
 // result => "foobar"
 ```
@@ -48,7 +48,7 @@ append("f", "o", "o", "b", "a", "r")
 Append an array of String to value
 
 ```java
-import static strman.appendArray
+import static strman.Strman.appendArray
 appendArray("f", new String[]{"o", "o", "b", "a", "r"}
 // result => "foobar"
 ```
@@ -58,7 +58,7 @@ appendArray("f", new String[]{"o", "o", "b", "a", "r"}
 Get the character at index. This method will take care of negative indexes.
 
 ```java
-import static strman.at
+import static strman.Strman.at
 at("foobar", 0)
 // result => Optional("f")
 ```
@@ -68,7 +68,7 @@ at("foobar", 0)
 Returns an array with strings between start and end.
 
 ```java
-import static strman.between
+import static strman.Strman.between
 between("[abc][def]", "[", "]")
 // result => ["abc","def"]
 ```
@@ -78,7 +78,7 @@ between("[abc][def]", "[", "]")
 Returns a String array consisting of the characters in the String.
 
 ```java
-import static strman.chars
+import static strman.Strman.chars
 chars("title")
 // result => ["t", "i", "t", "l", "e"]
 ```
@@ -88,7 +88,7 @@ chars("title")
 Replace consecutive whitespace characters with a single space.
 
 ```java
-import static strman.collapseWhitespace
+import static strman.Strman.collapseWhitespace
 collapseWhitespace("foo    bar")
 // result => "foo bar"
 ```
@@ -98,7 +98,7 @@ collapseWhitespace("foo    bar")
 Verifies that the needle is contained in the value.
 
 ```java
-import static strman.contains
+import static strman.Strman.contains
 contains("foo bar","foo")
 // result => true
 
@@ -111,7 +111,7 @@ contains("foo bar","FOO", false) // turning off case sensitivity
 Verifies that all needles are contained in value
 
 ```java
-import static strman.containsAll
+import static strman.Strman.containsAll
 containsAll("foo bar", new String[]{"foo", "bar"})
 // result => true
 
@@ -124,7 +124,7 @@ containsAll("foo bar", new String[]{"FOO", "bar"},false)
 Verifies that one or more of needles are contained in value.
 
 ```java
-import static strman.containsAny
+import static strman.Strman.containsAny
 containsAny("bar foo", new String[]{"FOO", "BAR", "Test"}, true)
 // result => true
 ```
@@ -134,7 +134,7 @@ containsAny("bar foo", new String[]{"FOO", "BAR", "Test"}, true)
 Count the number of times substr appears in value
 
 ```java
-import static strman.countSubstr
+import static strman.Strman.countSubstr
 countSubstr("aaaAAAaaa", "aaa")
 // result => 2
 countSubstr("aaaAAAaaa", "aaa", false, false)
@@ -146,7 +146,7 @@ countSubstr("aaaAAAaaa", "aaa", false, false)
 Test if value ends with search.
 
 ```java
-import static strman.endsWith
+import static strman.Strman.endsWith
 endsWith("foo bar", "bar")
 // result => true
 endsWith("foo Bar", "BAR", false)
@@ -158,7 +158,7 @@ endsWith("foo Bar", "BAR", false)
 Ensures that the value begins with prefix. If it doesn't exist, it's prepended.
 
 ```java
-import static strman.ensureLeft
+import static strman.Strman.ensureLeft
 ensureLeft("foobar", "foo")
 // result => "foobar"
 ensureLeft("bar", "foo")
@@ -172,7 +172,7 @@ ensureLeft("foobar", "FOO", false)
 Decodes data encoded with MIME base64
 
 ```java
-import static strman.base64Decode
+import static strman.Strman.base64Decode
 base64Decode("c3RybWFu")
 // result => "strma"
 ```
@@ -182,7 +182,7 @@ base64Decode("c3RybWFu")
 Encodes data with MIME base64.
 
 ```java
-import static strman.base64Encode
+import static strman.Strman.base64Encode
 base64Encode("strman")
 // result => "c3RybWFu"
 ```
@@ -192,7 +192,7 @@ base64Encode("strman")
 Convert binary unicode (16 digits) string to string chars
 
 ```java
-import static strman.binDecode
+import static strman.Strman.binDecode
 binDecode("0000000001000001")
 // result => "A"
 ```
@@ -202,7 +202,7 @@ binDecode("0000000001000001")
 Convert string chars to binary unicode (16 digits)
 
 ```java
-import static strman.binEncode
+import static strman.Strman.binEncode
 binEncode("A")
 // result => "0000000001000001"
 ```
@@ -212,7 +212,7 @@ binEncode("A")
 Convert decimal unicode (5 digits) string to string chars
 
 ```java
-import static strman.decDecode
+import static strman.Strman.decDecode
 decDecode("00065")
 // result => "A"
 ```
@@ -222,7 +222,7 @@ decDecode("00065")
 Convert string chars to decimal unicode (5 digits)
 
 ```java
-import static strman.decEncode
+import static strman.Strman.decEncode
 decEncode("A")
 // result => "00065"
 ```
@@ -232,7 +232,7 @@ decEncode("A")
 Ensures that the value ends with suffix. If it doesn't, it's appended.
 
 ```java
-import static strman.ensureRight
+import static strman.Strman.ensureRight
 ensureRight("foo", "bar")
 // result => "foobar"
 
@@ -248,7 +248,7 @@ ensureRight("fooBAR", "bar", false)
 Returns the first n chars of String
 
 ```java
-import static strman.first
+import static strman.Strman.first
 first("foobar", 3)
 // result => "foo"
 ```
@@ -258,7 +258,7 @@ first("foobar", 3)
 Return the first char of String
 
 ```java
-import static strman.head
+import static strman.Strman.head
 head("foobar")
 // result => "f"
 ```
@@ -268,7 +268,7 @@ head("foobar")
 Convert hexadecimal unicode (4 digits) string to string chars
 
 ```java
-import static strman.hexDecode
+import static strman.Strman.hexDecode
 hexDecode("0041")
 // result => "A"
 ```
@@ -278,7 +278,7 @@ hexDecode("0041")
 Convert string chars to hexadecimal unicode (4 digits)
 
 ```java
-import static strman.hexEncode
+import static strman.Strman.hexEncode
 hexEncode("A")
 // result => "0041"
 ```
@@ -288,7 +288,7 @@ hexEncode("A")
 Tests if two Strings are inequal
 
 ```java
-import static strman.inequal
+import static strman.Strman.inequal
 inequal("a", "b")
 // result => true
 ```
@@ -298,7 +298,7 @@ inequal("a", "b")
 Inserts 'substr' into the 'value' at the 'index' provided.
 
 ```java
-import static strman.insert
+import static strman.Strman.insert
 insert("fbar", "oo", 1)
 // result => "foobar"
 ```
@@ -308,7 +308,7 @@ insert("fbar", "oo", 1)
 Return the last n chars of String
 
 ```java
-import static strman.last
+import static strman.Strman.last
 last("foobarfoo", 3)
 // result => "foo"
 ```
@@ -318,7 +318,7 @@ last("foobarfoo", 3)
 Returns a new string of a given length such that the beginning of the string is padded.
 
 ```java
-import static strman.leftPad
+import static strman.Strman.leftPad
 leftPad("1", "0", 5)
 // result => "00001"
 ```
@@ -328,7 +328,7 @@ leftPad("1", "0", 5)
 This method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from the offset.
 
 ```java
-import static strman.lastIndexOf
+import static strman.Strman.lastIndexOf
 lastIndexOf("foobarfoobar", "F", false)
 // result => 6
 ```
@@ -338,7 +338,7 @@ lastIndexOf("foobarfoobar", "F", false)
 Removes all spaces on left
 
 ```java
-import static strman.leftTrim
+import static strman.Strman.leftTrim
 leftTrim("     strman")
 // result => "strman"
 ```
