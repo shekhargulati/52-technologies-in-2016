@@ -57,8 +57,10 @@ Rather than defining a range like `{1,2}`, you can also define fixed values like
 
 There are shorthand notation for common quantifier mentioned below:
 
-* = {0,} zero or more
-+ = {1,} one or more
+\* = {0,} zero or more
+
+\+ = {1,} one or more
+
 ? = {0,1} optional
 
 ### Spelling 3: Matching `Gadafy`
