@@ -56,6 +56,8 @@ Below is the list of technologies covered in this series:
 
 21. **[Week 21: May 22, 2016](./21-strman)** [Java 8 String Manipulation Library](./21-strman/README.md). This week I wrote and released a Java 8 library to work with String.
 
+22. **[Week 22: May 29, 2016](./22-regex)** [Making Sense of Regular Expressions](./22-regex/README.md). In this tutorial, I will walk you through a series of examples that will help you learn about regular expressions. I will end this tutorial by covering a library [VerbalExpressions](https://github.com/VerbalExpressions) that you can use to programmatically build regular expressions.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
