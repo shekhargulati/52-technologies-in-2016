@@ -58,9 +58,9 @@ Below is the list of technologies covered in this series:
 
 22. **[Week 22: May 29, 2016](./22-regex)** [Making Sense of Regular Expressions](./22-regex/README.md). In this tutorial, I will walk you through a series of examples that will help you learn about regular expressions. I will end this tutorial by covering a library [VerbalExpressions](https://github.com/VerbalExpressions) that you can use to programmatically build regular expressions.
 
-23. **[Week 23: June 5, 2016](./23-android-part1)** [Building An Android Application To Track Missing Kids Part 1](./23-android-part1/README.md). I have not yet written this article.
+23. **[Week 23: June 5, 2016](./23-android-part1)** [Building An Android Application Part 1](./23-android-part1/README.md). In this tutorial, we will develop an Android app that will be used to report and track missing kids. Today, we will only cover photo capturing capability of the application. Like any camera application, this application will enable users to capture photos, save them to an album, and finally upload them to the backend servers.
 
-23. **[Week 24: June 12, 2016](./24-jekyll-to-wordpress)** [Moving back to WordPress from Jekyll](./24-jekyll-to-wordpress/README.md). In this blog, I will share my experience of running a Jekyll blog and then migrating it back to WordPress.
+24. **[Week 24: June 12, 2016](./24-jekyll-to-wordpress)** [Moving back to WordPress from Jekyll](./24-jekyll-to-wordpress/README.md). In this blog, I will share my experience of running a Jekyll blog and then migrating it back to WordPress.
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
