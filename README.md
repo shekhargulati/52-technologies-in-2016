@@ -60,6 +60,8 @@ Below is the list of technologies covered in this series:
 
 23. **[Week 23: June 5, 2016](./23-android-part1)** [Building An Android Application To Track Missing Kids Part 1](./23-android-part1/README.md). I have not yet written this article.
 
+23. **[Week 24: June 12, 2016](./24-jekyll-to-wordpress)** [Moving back to WordPress from Jekyll](./24-jekyll-to-wordpress/README.md). In this blog, I will share my experience of running a Jekyll blog and then migrating it back to WordPress.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
