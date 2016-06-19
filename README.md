@@ -62,6 +62,9 @@ Below is the list of technologies covered in this series:
 
 24. **[Week 24: June 12, 2016](./24-jekyll-to-wordpress)** [Moving back to WordPress from Jekyll](./24-jekyll-to-wordpress/README.md). In this blog, I will share my experience of running a Jekyll blog and then migrating it back to WordPress.
 
+25. **[Week 25: June 19, 2016](./25-angular-dragula)** [Trello Clone with Angular Dragula](./25-angular-dragula/README.md). In this blog, I will cover how you can build Trello like drag and drop list interface with Angular Dragula.
+
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
