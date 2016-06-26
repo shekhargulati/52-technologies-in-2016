@@ -64,6 +64,7 @@ Below is the list of technologies covered in this series:
 
 25. **[Week 25: June 19, 2016](./25-angular-dragula)** [Trello Clone with Angular Dragula](./25-angular-dragula/README.md). In this blog, I will cover how you can build Trello like drag and drop list interface with Angular Dragula.
 
+26. **[Week 26: June 26, 2016](./26-android-part2)** [Building An Android Application Part 2](./26-android-part2/README.md). In this blog, we will extend the Android application we built in week 23.  We will use an Android library Glide to handle the image preview. We will also add sharing functionality using Android's inbuilt sharing support using ShareActionProvider.
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
