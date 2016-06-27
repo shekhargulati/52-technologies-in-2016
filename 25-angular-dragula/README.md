@@ -68,6 +68,10 @@ Next, you will be asked if you want to use CSS preprocessor. We will use plain o
 
 ![](images/yeoman-8.png)
 
+Last question you will be asked is your choice of JS preprocessor. We will use `ES6 (Babel formerly 6to5), ECMAScript 6 compiled with Babel which requires no runtime.` as we would like to use ES6.
+
+![](images/yeoman-11.png)
+
 # Step 2: Run the application
 
 Once application is scaffolded in step 1, we can run the application. To run the application, you will use gulp. We will use `serve` task of gulp. It will build the project and then start a simple HTTP server that will render contents of our web application.
