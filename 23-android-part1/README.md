@@ -191,7 +191,7 @@ Update the `strings.xml` to define a property `menu_take_photo` with the value `
 </resources>
 ```
 
-Rather than manually adding a string value resource to `strings.xml`, you can use Android Studio shortcuts to create a property as well. Navigate to `android:title` and press `option+enter` on Mac, this will open a menu where you can select your action. As we want to create a new string value resource so we will select that.
+Rather than manually adding a string value resource to `strings.xml`, you can use Android Studio shortcuts to create a property as well. Navigate to `android:title` and press `option+enter` on Mac  or `alt+enter` on Windows, this will open a menu where you can select your action. As we want to create a new string value resource so we will select that.
 
 ![](images/add-string-resource.png)
 
@@ -292,7 +292,7 @@ private void takePhoto() {
 }
 
 private String getImageName() {
-    return "IMG-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) + "-";
+    return "IMG-" + new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date()) + "-"; //import class from java.util
 }
 ```
 
@@ -458,7 +458,7 @@ public Bitmap createScaledBitmap(String pathName) throws IOException {
     ExifInterface exif = new ExifInterface(file.getPath());
     int rotation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
     int rotationInDegrees = exifToDegrees(rotation);
-    Matrix matrix = new Matrix();
+    Matrix matrix = new Matrix();  //import this class from android.graphics
     if (rotation != 0f) {
         matrix.preRotate(rotationInDegrees);
     }
@@ -482,6 +482,13 @@ Now, if you will run your app and take a photo it will be shown correctly.
 
 
 <img src="images/preview.jpg" height="300" width="200"></img>
+
+## Note
+ 
+ 
+To avoid importing the wrong classes, please look carefully at the comment beside some of the codes.  Android Studio will correctly import most of the classes automatically but incases where there are multiple choices, the correct package containing the class is written as comment behind that class. 
+
+<img src="http://i.imgur.com/Ffsqlhy.png"></img>
 
 
 ------
