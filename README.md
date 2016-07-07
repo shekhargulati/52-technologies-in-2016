@@ -7,6 +7,9 @@ I have taken a challenge to learn a new technology every week in 2016. The goal 
 
 Please contribute if you see an error or something that could be better! Raise an [issue](https://github.com/shekhargulati/52-technologies-in-2016/issues) or send me a pull request to improve. Contributions of all kinds, including corrections, additions, improvements, and translations, are welcome!
 
+## Open for external blogs
+
+If you would like to write a guest post for 52-technologies-in-2016 series then send a PR with a blog post.
 
 ## Technologies covered in 52 technologies in 2016 series
 
@@ -65,6 +68,8 @@ Below is the list of technologies covered in this series:
 25. **[Week 25: June 19, 2016](./25-angular-dragula)** [Trello Clone with Angular Dragula](./25-angular-dragula/README.md). In this blog, I will cover how you can build Trello like drag and drop list interface with Angular Dragula.
 
 26. **[Week 26: June 26, 2016](./26-android-part2)** [Building An Android Application Part 2](./26-android-part2/README.md). In this blog, we will extend the Android application we built in week 23.  We will use an Android library Glide to handle the image preview. We will also add sharing functionality using Android's inbuilt sharing support using ShareActionProvider.
+
+27. **[Week 27: July 03, 2016](./27-learn-golang-for-great-good)** [Learn GoLang For Great Good -- Part 1](./27-learn-golang-for-great-good/README.md). In this blog, we will learn Go programming language by writing a number of small programs. Go is an object oriented programming language with memory management builtin. 
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
