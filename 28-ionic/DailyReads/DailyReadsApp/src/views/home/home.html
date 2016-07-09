@@ -1,0 +1,12 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <div class="list card" ng-repeat="newsInfo in news track by $index">
+      <div class="item item-body">
+         <img src="{{newsInfo.img}}">
+         <p>
+           {{ newsInfo.text }}
+         </p>
+       </div>
+    </div>
+  </<ion-content>
+</ion-view>

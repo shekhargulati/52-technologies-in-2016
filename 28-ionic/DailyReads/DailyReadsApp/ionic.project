@@ -1,0 +1,6 @@
+{
+  "name": "DailyReadsApp",
+  "app_id": "",
+  "gulpDependantTasks": ["views", "babel"],
+  "gulpStartupTasks": ["watch"]
+}
