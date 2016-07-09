@@ -7,8 +7,10 @@ import os
 import json
 import time
 from flask import Flask, render_template, Response
+from flask.ext.cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/api/")
 def data():

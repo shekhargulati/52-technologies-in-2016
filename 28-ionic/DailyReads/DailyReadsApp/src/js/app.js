@@ -6,7 +6,7 @@
 angular.module('dailyReads', ['ionic'])
 
 .run(($ionicPlatform) => {
-  $ionicPlatform.ready(function() {
+  $ionicPlatform.ready(() => {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -35,17 +35,17 @@ angular.module('dailyReads', ['ionic'])
 })
 
 .controller('HomeController',($scope,$http) => {
-
+  $scope.news = []
   $scope.reloadFavs = function(){
-    console.log('Reload route',$scope.routes[idx].id);
-    $http.jsonp("http://localhost:5000/api/"{
-            params: { callback:'JSON_CALLBACK' }
-         }).success(function(data){
+    $http.get("http://localhost:5000/api/")
+          .success(function(data){
             $scope.news = data;
+            $scope.$broadcast('scroll.refreshComplete');
          }).error(function(data, status, headers, config){
            console.log('oops error occured while refreshing data',JSON.stringify(data));
+            $scope.$broadcast('scroll.refreshComplete');
          });
   }
 
-  $scope.news = []
+  $scope.reloadFavs();
 })

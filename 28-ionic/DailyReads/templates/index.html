@@ -65,7 +65,7 @@
         <!-- /.row -->
 
         <!-- Project One -->
-        
+
         {% for article in articles %}
             <div class="row">
             <div class="col-md-7">
@@ -75,7 +75,7 @@
             </div>
             <div class="col-md-5">
                 <h3>{{ article.title }}</h3>
-                <p>{{ article.text.decode("utf-8") }}</p>
+                <p>{{ article.text }}</p>
                 <a class="btn btn-primary" href="{{ article.story_url }}" target="_blank">Read Full Article <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
