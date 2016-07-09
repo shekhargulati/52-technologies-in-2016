@@ -6,14 +6,18 @@ from tweepy import Stream
 import os
 import json
 import time
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 
 app = Flask(__name__)
 
+@app.route("/api/")
+def data():
+    return Response(json.dumps(sorted(articles, key=lambda article: article["liked_on"], reverse=True)),  mimetype='application/json')
 
 @app.route("/")
 def index():
     return render_template("index.html", articles=sorted(articles, key=lambda article: article["liked_on"], reverse=True))
+
 
 consumer_key=os.getenv("TWITTER_CONSUMER_KEY")
 consumer_secret=os.getenv("TWITTER_CONSUMER_SECRET")
@@ -62,8 +66,7 @@ def extract_article(story_url):
     return {
         'title':title,
         'img':img,
-        'publish_date':publish_date,
-        'text':text.encode('ascii','ignore')
+        'text': text
     }
 
 
