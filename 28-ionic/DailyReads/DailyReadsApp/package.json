@@ -1,0 +1,30 @@
+{
+  "name": "DailyReads",
+  "version": "1.0.0",
+  "description": "Lists Twitter likes",
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "gulp": "^3.5.6",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
+}

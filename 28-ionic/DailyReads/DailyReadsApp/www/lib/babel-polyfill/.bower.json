@@ -1,0 +1,32 @@
+{
+  "name": "babel-polyfill",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nicksrandall/babel-polyfill",
+  "authors": [
+    "Nick Randall <nick.randall@domo.com>"
+  ],
+  "description": "A stand alone browser polyfill for babel",
+  "main": "browser-polyfill.js",
+  "keywords": [
+    "babel",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "cc7578292b8fac19919c46d8d82982a9418c8c19"
+  },
+  "_source": "https://github.com/nicksrandall/babel-polyfill.git",
+  "_target": "~0.0.1",
+  "_originalSource": "babel-polyfill",
+  "_direct": true
+}

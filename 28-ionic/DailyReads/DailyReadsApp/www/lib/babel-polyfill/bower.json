@@ -1,0 +1,22 @@
+{
+  "name": "babel-polyfill",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nicksrandall/babel-polyfill",
+  "authors": [
+    "Nick Randall <nick.randall@domo.com>"
+  ],
+  "description": "A stand alone browser polyfill for babel",
+  "main": "browser-polyfill.js",
+  "keywords": [
+    "babel",
+    "polyfill"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
