@@ -1,7 +1,7 @@
 Authors
 ---
 
-Below is the list of people who have contributes to 52 technology series.
+Below is the list of people who have contributed to 52 technology series.
 
 1. [Shekhar Gulati](https://github.com/shekhargulati)
 2. [Rahul Sharma](https://github.com/rahul0208)
