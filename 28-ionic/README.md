@@ -69,7 +69,9 @@ cd DailyReadsApp
 ionic serve
 ```
 The server would start and would render a page at http://localhost:8100/
+
 ![Blank Application](images/blank.png)
+
 The application is now run in live mode. If I make changes to the files inside the `www` folder and it gets refreshed automatically.
 
 The complete application is deployed from the `app.js` file inside the `www\js` directory. Try making some changes to see the effect. The `app.js` contains javascript but I would prefer to use ECMAScript. So lets setup the project to use ES6 and transpile it using [Babel](https://babeljs.io/)
@@ -233,5 +235,7 @@ Note, if we install the app to an android device it will not run as it is trying
 Our mobile app is now finally done ! So some people might think that we can ship the app now to all kinds of online store like google play. I would say that no, we are still a few steps away before we can accomplish that. We must release the app. The release process would optimize the build and would version it. Post that we need to have credentials for play store. I would leave this for some other time.
 
 The application as of now offers a good test bed to learn and experiment more things like adding splash screens, icons or replacing the pull with a push(via ionic services). I would advice to try out such things to learn more about the framework.  
+
 ----------
+
 Please provide your valuable feedback by posting a comment to https://github.com/shekhargulati/52-technologies-in-2016/issues/37
