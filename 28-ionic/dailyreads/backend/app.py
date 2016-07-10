@@ -12,8 +12,8 @@ from flask.ext.cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/api/")
-def data():
+@app.route("/api/bookmarks")
+def bookmarks():
     return Response(json.dumps(sorted(articles, key=lambda article: article["liked_on"], reverse=True)),  mimetype='application/json')
 
 @app.route("/")
