@@ -600,7 +600,7 @@ One thing that we all Java developers take for granted is that Java remain binar
 ```scala
 scalaVersion := "2.11.1"
 
-otherScalaVersions := Seq("2.9.1", "2.10.1")
+crossScalaVersions := Seq("2.9.1", "2.10.1")
 ```
 
 Now, when you will use sbt to build the project by default, it will build the project against the Scala version `2.11.1` but, you have an option to use other Scala versions defined in your build script.
