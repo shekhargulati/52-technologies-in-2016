@@ -7,6 +7,9 @@ I have taken a challenge to learn a new technology every week in 2016. The goal 
 
 Please contribute if you see an error or something that could be better! Raise an [issue](https://github.com/shekhargulati/52-technologies-in-2016/issues) or send me a pull request to improve. Contributions of all kinds, including corrections, additions, improvements, and translations, are welcome!
 
+## Open for external blogs
+
+If you would like to write a guest post for 52-technologies-in-2016 series then send a PR with a blog post.
 
 ## Technologies covered in 52 technologies in 2016 series
 
@@ -46,7 +49,29 @@ Below is the list of technologies covered in this series:
 
 16. **[Week 16: April 17, 2016](./16-newspaper)** [Building Your "Read It Later" App using Python and Newspaper Library](./16-newspaper/README.md).In this tutorial, you will learn how we can use a Python library newspaper to perform article extraction and build a simple "Read It Later" application.
 
-17. **[Week 17: April 24, 2016](./17-typescript)** [Let's Learn TypeScript](./17-typescript/README.md). This week I decided to learn TypeScript so I will discuss how you can get started with TypeScript. TypeScript is a typed superset of JavaScript, which means that it supports all the JavaScript features plus it adds static typing to the language. 
+17. **[Week 17: April 24, 2016](./17-typescript)** [Let's Learn TypeScript](./17-typescript/README.md). This week I decided to learn TypeScript so I will discuss how you can get started with TypeScript. TypeScript is a typed superset of JavaScript, which means that it supports all the JavaScript features plus it adds static typing to the language.
+
+18. **[Week 18: May 01, 2016](./18-mesos)** [Getting Started with Apache Mesos](./18-mesos/README.md). This week we will learn about [Apache Mesos](http://mesos.apache.org/) -- an open source cluster manager and scheduler for your datacenter.
+
+19. **[Week 19: May 08, 2016](./19-bees)** [Load testing with bees](./19-bees/README.md). This week I discovered a Python utility called `beeswithmachineguns` that can load test a web application by launching many micro EC2 instances.
+
+20. **[Week 20: May 15, 2016](./20-json)** [5 open source projects that will make working with JSON awesome and fun](./20-json/README.md). This week I will share my 5 favorite open source projects that makes working with JSON easy and fun. I use them on regular basis and find them very useful whenever I am working with JSON.
+
+21. **[Week 21: May 22, 2016](./21-strman)** [Java 8 String Manipulation Library](./21-strman/README.md). This week I wrote and released a Java 8 library to work with String.
+
+22. **[Week 22: May 29, 2016](./22-regex)** [Making Sense of Regular Expressions](./22-regex/README.md). In this tutorial, I will walk you through a series of examples that will help you learn about regular expressions. I will end this tutorial by covering a library [VerbalExpressions](https://github.com/VerbalExpressions) that you can use to programmatically build regular expressions.
+
+23. **[Week 23: June 5, 2016](./23-android-part1)** [Building An Android Application Part 1](./23-android-part1/README.md). In this tutorial, we will develop an Android app that will be used to report and track missing kids. Today, we will only cover photo capturing capability of the application. Like any camera application, this application will enable users to capture photos, save them to an album, and finally upload them to the backend servers.
+
+24. **[Week 24: June 12, 2016](./24-jekyll-to-wordpress)** [Moving back to WordPress from Jekyll](./24-jekyll-to-wordpress/README.md). In this blog, I will share my experience of running a Jekyll blog and then migrating it back to WordPress.
+
+25. **[Week 25: June 19, 2016](./25-angular-dragula)** [Trello Clone with Angular Dragula](./25-angular-dragula/README.md). In this blog, I will cover how you can build Trello like drag and drop list interface with Angular Dragula.
+
+26. **[Week 26: June 26, 2016](./26-android-part2)** [Building An Android Application Part 2](./26-android-part2/README.md). In this blog, we will extend the Android application we built in week 23.  We will use an Android library Glide to handle the image preview. We will also add sharing functionality using Android's inbuilt sharing support using ShareActionProvider.
+
+27. **[Week 27: July 03, 2016](./27-learn-golang-for-great-good)** [Learn GoLang For Great Good -- Part 1](./27-learn-golang-for-great-good/README.md). In this blog, we will learn Go programming language by writing a number of small programs. Go is an object oriented programming language with memory management builtin.
+
+28. **[Week 28: July 10, 2016](./28-ionic)** [Build mobile apps using Ionic Framework](./28-ionic/README.md). In this blog, we will build a hybrid mobile app using Ionic and Cordova. The complete application will have a server side which will send JSON data, consumed by the application. The mobile app is written in ECMAScript. 
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)

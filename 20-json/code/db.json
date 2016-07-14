@@ -1,0 +1,33 @@
+{
+  "tasklists": [
+    {
+      "id": 1,
+      "name": "Todo"
+    },
+    {
+      "id": 2,
+      "name": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "Done"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Write week 20 blog on json-server",
+      "tasklistId": 1
+    },
+    {
+      "id": 2,
+      "name": "Read Machine Learning in Action book",
+      "tasklistId": 2
+    },
+    {
+      "id": 3,
+      "name": "Release strman libray",
+      "tasklistId": 3
+    }
+  ]
+}
