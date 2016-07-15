@@ -71,7 +71,9 @@ Below is the list of technologies covered in this series:
 
 27. **[Week 27: July 03, 2016](./27-learn-golang-for-great-good)** [Learn GoLang For Great Good -- Part 1](./27-learn-golang-for-great-good/README.md). In this blog, we will learn Go programming language by writing a number of small programs. Go is an object oriented programming language with memory management builtin.
 
-28. **[Week 28: July 10, 2016](./28-ionic)** [Build mobile apps using Ionic Framework](./28-ionic/README.md). In this blog, we will build a hybrid mobile app using Ionic and Cordova. The complete application will have a server side which will send JSON data, consumed by the application. The mobile app is written in ECMAScript. 
+28. **[Week 28: July 10, 2016](./28-ionic)** [Build mobile apps using Ionic Framework](./28-ionic/README.md). In this blog, we will build a hybrid mobile app using Ionic and Cordova. The complete application will have a server side which will send JSON data, consumed by the application. The mobile app is written in ECMAScript.
+
+29. **[Week 29: July 15, 2016](./29-golang-github-slacknotification)** [Go Language - GitHub System Status API & Slack Notifications](./29-golang-github-slacknotification/README.md). In this blog, we are going to investigate a few more features of the language and combine that into a real life application where we can monitor the status of the GitHub System via its Status API and report its current status directly into a Slack Team page.
 
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
