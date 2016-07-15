@@ -21,9 +21,9 @@ A sample invocation of the API gives the JSON response as given below:
 
 ```json
 {
-status: "good",
-body: "Everything operating normally.",
-created_on: "2016-07-12T17:09:55Z"
+  "status": "good",
+  "body": "Everything operating normally.",
+  "created_on": "2016-07-12T17:09:55Z"
 }
 ```
 
@@ -157,9 +157,9 @@ In our case, we are interested in creating a `struct` that will represent the JS
 
 ```json
 {
-status: "good",
-body: "Everything operating normally.",
-created_on: "2016-07-12T17:09:55Z"
+  "status": "good",
+  "body": "Everything operating normally.",
+  "created_on": "2016-07-12T17:09:55Z"
 }
 ```
 
