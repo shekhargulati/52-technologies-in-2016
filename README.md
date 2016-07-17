@@ -75,6 +75,8 @@ Below is the list of technologies covered in this series:
 
 29. **[Week 29: July 15, 2016](./29-golang-github-slacknotification)** [Go Language - GitHub System Status API & Slack Notifications](./29-golang-github-slacknotification/README.md). In this blog, we are going to investigate a few more features of the language and combine that into a real life application where we can monitor the status of the GitHub System via its Status API and report its current status directly into a Slack Team page.
 
+30. **[Week 29: July 17, 2016](./29-go-unit-testing)** [Learn GoLang For Great Good Part 2: Unit Testing in Go](./29-go-unit-testing/README.md). This week we will take our Go knowledge to the next level by learning how to perform unit testing in Go. Unit testing has become an essential skill set for every programmer.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
