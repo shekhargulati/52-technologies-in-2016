@@ -77,6 +77,10 @@ Below is the list of technologies covered in this series:
 
 30. **[Week 29: July 17, 2016](./29-go-unit-testing)** [Learn GoLang For Great Good Part 2: Unit Testing in Go](./29-go-unit-testing/README.md). This week we will take our Go knowledge to the next level by learning how to perform unit testing in Go. Unit testing has become an essential skill set for every programmer.
 
+31. **[Week 30: July 24, 2016](#)** Not yet written.
+
+32. **[Week 31: July 31, 2016](https://github.com/shekhargulati/gradle-tips)** Over last year or so I have started using Gradle as my primary build tool for JVM based projects. Before using Gradle I was an Apache Maven user. Gradle takes best from both Apache Maven and Apache Ant providing you best of both worlds. Gradle borrows flexibility from Ant and convention over configuration, dependency management and plugins from Maven. In this document, I will list down tips that I have learnt over last year or so.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
