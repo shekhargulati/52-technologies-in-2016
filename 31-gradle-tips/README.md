@@ -686,4 +686,9 @@ $ gradle bootRun --debug-jvm
 ```
 
 -----------
+
+That's all for this week. Please provide your valuable feedback by adding a comment to [https://github.com/shekhargulati/52-technologies-in-2016/issues/44](https://github.com/shekhargulati/52-technologies-in-2016/issues/44).
+
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
+
+[![Analytics](https://ga-beacon.appspot.com/UA-59411913-2/shekhargulati/52-technologies-in-2016/31-gradle-tips)](https://github.com/igrigorik/ga-beacon)
