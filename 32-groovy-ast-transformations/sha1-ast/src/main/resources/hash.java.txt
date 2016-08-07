@@ -1,0 +1,11 @@
+import java.security.MessageDigest
+
+class MyClass {
+    String toHash() {
+        def hash = MessageDigest.getInstance('SHA1')
+
+        hash.digest().inject(new StringBuffer()) { sb, it ->
+            sb.append(String.format('%02x', it))
+        }.toString()
+    }
+}

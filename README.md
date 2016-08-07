@@ -81,6 +81,8 @@ Below is the list of technologies covered in this series:
 
 32. **[Week 31: July 31, 2016](./31-gradle-tips)** [50 Gradle Tips](./31-gradle-tips/README.md). Over last year or so I have started using Gradle as my primary build tool for JVM based projects. In this document, I will list down tips that I have learnt over last year or so.
 
+33. **[Week 32: August 7, 2016](./32-groovy-ast-transformations)** [Groovy AST Transformations By Example](./32-groovy-ast-transformations/README.md). This week I learnt about Groovy AST transformations. AST transformations allows you to hook into the Groovy compilation process so that you can customize it to meet your needs. In this blog, you will learn how to write an AST transformation that will add a `toHash` method to a class. `toHash` method will generate a hash for your object. You will be able to provide hash algorithm of your choice. We will use Java's `java.security.MessageDigest` to generate the hash code.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
