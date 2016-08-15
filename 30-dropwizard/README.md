@@ -1,4 +1,4 @@
-Dropwizard: Your Java Library For Building MicroServices
+Dropwizard: Your Java Library For Building Microservices
 ----
 
 Welcome to the thirtieth post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I decided to spend time on [Dropwizard](http://www.dropwizard.io/1.0.0/docs/). Back in 2013, I first learnt about DropWizard when I was exploring Java micro-frameworks. [Dropwizard] impressed me a lot with its opinionated approach to building ops-friendly, high-performance RESTful backends. You can spin up REST backends in a matter of minutes taking your productivity to the next level. [Dropwizard](http://www.dropwizard.io/1.0.0/docs/) is an open source Java framework which was developed by Yammer to power their JVM based backend. It consists of following components :
