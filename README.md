@@ -77,7 +77,7 @@ Below is the list of technologies covered in this series:
 
 30. **[Week 29: July 17, 2016](./29-go-unit-testing)** [Learn GoLang For Great Good Part 2: Unit Testing in Go](./29-go-unit-testing/README.md). This week we will take our Go knowledge to the next level by learning how to perform unit testing in Go. Unit testing has become an essential skill set for every programmer.
 
-31. **[Week 30: July 24, 2016](./30-dropwizard)[Dropwizard: Your Java Library For Building Microservices](./30-dropwizard/README.md)** This blog covers how to build Java REST backend using Dropwizard library.
+31. **[Week 30: July 24, 2016](./30-dropwizard)** [Dropwizard: Your Java Library For Building Microservices](./30-dropwizard/README.md)** This blog covers how to build Java REST backend using Dropwizard library.
 
 32. **[Week 31: July 31, 2016](./31-gradle-tips)** [50 Gradle Tips](./31-gradle-tips/README.md). Over last year or so I have started using Gradle as my primary build tool for JVM based projects. In this document, I will list down tips that I have learnt over last year or so.
 
