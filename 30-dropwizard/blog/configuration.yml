@@ -1,0 +1,3 @@
+mongohost: localhost
+mongoport: 27017
+mongodb: blogdb
