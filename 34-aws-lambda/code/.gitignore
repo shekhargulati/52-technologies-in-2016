@@ -1,0 +1,4 @@
+venv/
+*.pyc
+*.zip
+*.zip.bak
