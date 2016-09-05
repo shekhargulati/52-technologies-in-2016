@@ -1,0 +1,22 @@
+{
+  "name": "traditional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.24.0",
+    "style-loader": "^0.13.1"
+  }
+}

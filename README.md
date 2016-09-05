@@ -85,6 +85,8 @@ Below is the list of technologies covered in this series:
 
 34. **[Week 34: August 21, 2016](./34-aws-lambda)** [Automating Your Static Website Social Notifications with AWS Lambda](./34-aws-lambda/README.md). AWS Lambda is an event-driven, serverless computing platform that executes your code in response to events. It manages the underlying infrastructure scaling it up or down to meet the event rate. You are only charged for the time your code is executed. AWS Lambda currently supports Java, Python, and Node.js language runtimes.
 
+35. **[Week 36: September 04, 2016](./36-webpack)** [Webpack: The Missing Tutorial](./36-webpack/README.md). webpack takes modules with dependencies and generates static assets representing those modules.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
