@@ -5,11 +5,11 @@ Welcome to the thirty-sixth blog of [52-technologies-in-2016](https://github.com
 
 ## Why we need webpack?
 
-Before we learn about webpack, let's understand why it exists and what problems it is trying to solve. One way to look at it is that [webpack](https://webpack.github.io/) allows you to get rid of bower and gulp/grunt in your application with a single tool i.e. webpack. Rather than using bower to install and manage client side dependencies, you use standard Node Package Manager(npm) to install and manage front-end dependencies. Most of the grunt/gulp tasks can be performed by webpack as well.
+Before we learn about webpack, let's understand why it exists and what problems it is trying to solve. One way to look at it is that [webpack](https://webpack.github.io/) allows you to get rid of bower and gulp/grunt in your application with a single tool: webpack. Rather than using bower to install and manage client side dependencies, you use the standard Node Package Manager(npm) to install and manage front-end dependencies. Most of the grunt/gulp tasks can be performed by webpack as well.
 
 > **Bower is a package manager for client side technologies. It can be used to search , install, uninstall web assets like JavaScript, HTML, and CSS. GruntJS is a JavaScript based command line build tool that helps developers automate repetitive tasks. You can think of it as a JavaScript alternative to Make or Ant. It perform tasks like minification, compilation, unit testing, linting, etc.**
 
-Let's suppose you are building a simple profile page for a web application that uses jQuery and underscore JavaScript libraries. One way to build our web page would be to include both jQuery and underscore in our html page.
+Let's suppose you are building a simple profile page for a web application that the uses jQuery and underscore JavaScript libraries. One way to build our web page would be to include both jQuery and underscore in our HTML page.
 
 ```html
 <!DOCTYPE html>
@@ -37,7 +37,7 @@ Let's suppose you are building a simple profile page for a web application that 
 
 The page shown above is a simple HTML page that uses bootstrap for styling. We included jquery and underscore libraries using the script tag.
 
-Let's now look at the `profile.js` which uses our JavaScript libraries. We enclosed our code in an anonymous closure that encapsulates our business logic. If you don't enclose the code in the function then variables will be in global space which is bad.
+Let's now look at the `profile.js` which uses our JavaScript libraries. We enclosed our code in an anonymous closure that encapsulates our business logic. If you don't enclose the code in the function, then variables will be in global space which is bad.
 
 ```javascript
 (function(){
@@ -62,21 +62,21 @@ Let's now look at the `profile.js` which uses our JavaScript libraries. We enclo
 
 This function is evaluated as soon as script is called.
 
-If you open the web page in a browser then you will see your profile page as shown below.
+If you open the web page in a browser, then you will see your profile page as shown below.
 
 ![](images/profile.png)
 
 The above JavaScript code does two things -- 1) getting user information 2) setting up timeline.
 
-We all know it is a bad practice to mix concerns so we should write specific modules that does one thing. In the `profile.js` JavaScript file above we used anonymous closure to encapsulate all our code. There are better ways to write modules in JavaScript. The two popular ways are CommonJS and AMD.
+We all know it is a bad practice to mix concerns, so we should write specific modules that do one thing. In the `profile.js` JavaScript file above, we used anonymous closure to encapsulate all our code. There are better ways to write modules in JavaScript. The two popular ways are CommonJS and AMD.
 
 * **A CommonJS module is essentially a reusable piece of JavaScript which exports specific objects, making them available for other modules to `require` in their programs.**
 
 * **Asynchronous Module Definition (AMD) allows you to load modules asynchronously.**
 
-If you want to learn more about JavaScript modules then I will refer you to read [JavaScript Modules: A Beginner’s Guide](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.627yk09t3).
+If you want to learn more about JavaScript modules, then I will refer you to [JavaScript Modules: A Beginner’s Guide](https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.627yk09t3).
 
-In this blog, we will write CommonJS modules. Let's write the timeline module that will have two methods to set the header and timeline. CommonJS allows you import the dependencies using the `require` function. As our timeline module depends on `jquery` and `underscore` so we explicitly declared them.
+In this blog, we will write CommonJS modules. Let's write the timeline module with methods to set the header and timeline. CommonJS allows you import the dependencies using the `require` function. As our timeline module depends on `jquery` and `underscore`, we explicitly declare them with the require keyword.
 
 ```javascript
 var $ = require('jquery');
@@ -98,9 +98,10 @@ function timeline(user){
 module.exports = timeline;
 ```
 
-The code shown above created a new module named `timeline`. We defined two functions `setHeader` and `setTimeline`. We used the special object `module` and added reference of our function to `module.exports`. This is the way you tell CommonJS module system that you want to expose a function so that others can use it.
+The code shown above creates a new module named `timeline`. We defined two functions: `setHeader` and `setTimeline`. We used the special object `module` and added reference of our function timeline to `module.exports`. This is the way you tell the CommonJS module system that you want to expose a function, so that others can use it.
 
-Now, we will update `profile.js` to use our `timeline` module. We can even create a new module that will load up the user information but for now let's go with one module.
+Now we will update `profile.js` to use our `timeline` module. We can even create a new module that will load up the user information, but for now let's go with one module.
+
 
 ```javascript
 var timeline = require('./timeline.js');
@@ -118,7 +119,7 @@ timelineModule.setHeader(user);
 timelineModule.setTimeline(user);
 ```
 
-If you load index.html in your web browser then you will see an empty page. Looking at the developer tools of your web browser will tell you the error.
+If you load index.html in your web browser, then you will see an empty page. Looking at the developer tools of your web browser will tell you the error.
 
 ```
 profile.js:1 Uncaught ReferenceError: require is not defined
@@ -128,11 +129,11 @@ The reason is that browsers don't understand module systems like CommonJS. You h
 
 ## module bundlers to the rescue
 
-Web browsers don't understand these well defined modules. You either have to add all your JavaScript code in a single file and then import it or you have to import all the JavaScript files manually in your page using the `script` tag. To overcome this problem, we use module bundlers. module bundlers can combine different modules and their dependencies into a single file in the correct order. They can parse code written using different module systems into the format browser understand. The two popular module bundler are:
+Web browsers don't understand these well defined modules. You either have to add all your JavaScript code in a single file and then import it, or you have to import all the JavaScript files manually in your page using the `script` tag. We use module bundlers to overcome this problem. Module bundlers combine different modules and their dependencies into a single file in the correct order. They can parse code written using different module systems into the format browser understand. The two popular module bundler are:
 
-1. **browserify**: it packages npm modules so that you can use them in your browser. When you are working with browserify, you will end up using Grunt or Gulp to perform tasks like linting, running tests, etc. This means you will have to spend time managing multiple tools and their integration.
+1. **browserify**: it packages npm modules, so that you can use them in your browser. When you are working with browserify, you will end up using Grunt or Gulp to perform tasks like linting, running tests, etc. This means you will have to spend time managing multiple tools and their integration.
 
-2. **webpack**: It is an opinionated build system that not only offers module bundling but can perform all the tasks that Gulp/Grunt can do. Also, webpack is not limited to bundling JavaScript files it can work with other static assets like CSS, images, html partials, etc. webpack also supports a very useful feature called `code splitting`. In bigger application, you can split your application into meaningful chunks which are loaded on-demand.
+2. **webpack**: it is an opinionated build system that not only offers module bundling, but can perform all the tasks that Gulp/Grunt can do. Also, webpack is not limited to bundling JavaScript files; it can work with other static assets like CSS, images, html partials, etc. Webpack also supports a very useful feature called `code splitting`. In bigger application, you can split your application into meaningful chunks which are loaded on-demand.
 
 ## What is webpack?
 
@@ -140,7 +141,7 @@ The [official definition of webpack](https://webpack.github.io/) is mentioned be
 
 > **webpack takes modules with dependencies and generates static assets representing those modules.**
 
-This definition will make sense now that you understand the problem it is trying to solve. webpack takes a set of input assets and transforms them into a bundle that you can then use.
+This definition will make sense now that you understand the problem it is trying to solve. Webpack takes a set of input assets and transforms them into a bundle that you can then use.
 
 ![](images/webpack.png)
 
@@ -166,13 +167,13 @@ $ npm install -S jquery
 $ npm install -S underscore
 ```
 
-We will also need to install webpack as a dependency as well.
+Additionally, we need to install webpack as a dependency.
 
 ```bash
 $ npm install -S webpack
 ```
 
-Replace your `index.html` with the code shown below. As you can see we have removed all the script tags for jquery and underscore. Also, instead of `js/profile.js`, we are importing `dist/bundle.js`.
+Replace your `index.html` with the code shown below. As you can see, we have removed all the script tags for jquery and underscore. Also, instead of importing `js/profile.js`, we are importing `dist/bundle.js`.
 
 ```html
 <!DOCTYPE html>
@@ -218,15 +219,15 @@ bundle.js  329 kB       0  [emitted]  main
 ```
 The command and its output is shown above.
 
-Now, if you reload your page you will see the profile page working fine.
+Now, if you reload your page, you will see the profile page working fine.
 
-You can also make webpack watch for changes and automatically generate bundle. To do that you have to launch webpack with watch flag as shown below.
+You can also make webpack watch for changes and automatically generate a bundle. To do that you have to launch webpack with watch flag as shown below.
 
 ```bash
 $ webpack -w js/profile.js dist/bundle.js
 ```
 
-This time webpack will process will not shutdown and keep running. As you make change, a new bundle will be generated. You just have to reload your webpage in your browser. Go to `profile.js` and change name as shown below. Refresh your webpage and you will see the changes.
+This time the webpack process will not shutdown and keep running. As you make changes, a new bundle will be generated. You just have to reload your webpage in your browser. Go to `profile.js` and change name as shown below. Refresh your webpage and you will see the changes.
 
 ```javascript
 var user = {
@@ -239,14 +240,14 @@ var user = {
 };
 ```
 
-The code generated by webpack in the `bundle.js` file contains a lot of webpack specific code and your application code with some transformation. If you have to debug your code using your browser devtools then it will not be friendly. To make it easier for you to debug your code using web tools, you can launch webpack with devtools flag.
+The code generated by webpack in the `bundle.js` file contains a lot of webpack specific code and your application code with some transformation. If you have to debug your code using your browser devtools, then it will not be friendly. To make it easier for you to debug your code using web tools, you can launch webpack with devtools flag.
 
 
 ```bash
 $ webpack -w --devtool source-map js/profile.js dist/bundle.js
 ```
 
-This will generate the source map for the bundle.js file. Source map allows you to map your minified or combined file back to an unbuilt state. This makes it easy to debug your application.
+This will generate the source map for the bundle.js file. The source map allows you to map your minified or combined file back to an unbuilt state. This makes it easy to debug your application.
 
 To test it you can add a debugger statement in profile.js as shown below.
 
@@ -274,7 +275,7 @@ Reload the page and the browser will stop the application at the debug location.
 
 ### requiring CSS
 
-In the html shown above, you will notice that we are loading our stylesheet `/css/style.css`. As I said before, webpack can be used not only with JavaScript but with other static assets like CSS. Remove the reference of `/css/style.css` from `index.html`. We will require the CSS in `profile.js` as shown below.
+In the HTML shown above, you will notice that we are loading our stylesheet `/css/style.css`. As I said before, webpack can be used not only with JavaScript but with other static assets like CSS. Remove the reference of `/css/style.css` from `index.html`. We will require the CSS in `profile.js` as shown below.
 
 ```javascript
 require('../css/style.css');
@@ -294,7 +295,7 @@ timelineModule.setHeader(user);
 timelineModule.setTimeline(user);
 ```
 
-webpack will reload the changes and you will see error in the console as shown below.
+webpack will reload the changes, and you will see error in the console as shown below.
 
 ```
 ERROR in ./css/style.css
@@ -329,7 +330,7 @@ $ webpack -w --devtool source-map js/profile.js dist/bundle.js
 
 ## Using webpack config
 
-Rather than specifying all the options using command line you can create a configuration file with name `webpack.config.js` at the root of your application and webpack will use it.
+Rather than specifying all the options using the command line, you can create a configuration file named `webpack.config.js` at the root of your application, and webpack will use it.
 
 ```javascript
 module.exports = {
@@ -345,7 +346,7 @@ module.exports = {
 
 Now, you can just use `webpack -w`.
 
-Remember that when you added `style!css!` in the `profile.js` you basically polluted your production code with webpack configuration. We can move that to webpack configuration as shown below.**Please note that you have to relaunch the webpack again so that configuration changes are picked up.**
+Remember that when you added `style!css!` in the `profile.js`, you basically polluted your production code with webpack configuration. We can move that to webpack configuration as shown below.**Please note that you have to relaunch the webpack again to pick up configuration changes.**
 
 ```javascript
 var webpack = require('webpack');
@@ -366,9 +367,9 @@ module.exports = {
 }
 ```
 
-The interesting section is the one with module declaration. Here we have specified that if the file ends with .css then apply the `style!css!` transformation.
+The interesting section is the one with module declaration. Here we have specified that if the file ends with .css, then apply the `style!css!` transformation.
 
-You can verify that changes are picked up and your webpage is working fine.
+You can verify that changes are picked up, and your webpage is working fine.
 
 ### hot reloading in action
 
@@ -378,9 +379,9 @@ webpack achieve hot reloading via the `webpack-dev-server`. You have to first in
 $ npm install -g webpack-dev-server
 ```
 
-Now, you can start the server by running `webpack-dev-server` command.
+Now you can start the server by running `webpack-dev-server` command.
 
-This will launch the server at http://localhost:8080/webpack-dev-server/ and will use the configuration you specified in `webpack.config.js`.
+This will launch the server at http://localhost:8080/webpack-dev-server/ with the configuration you specified in `webpack.config.js`.
 
 
 You can change the port by specifying `--port` option.
