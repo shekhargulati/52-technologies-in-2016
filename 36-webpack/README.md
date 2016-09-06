@@ -115,8 +115,8 @@ var user = {
 };
 
 var timelineModule = new timeline(user);
-timelineModule.setHeader(user);
-timelineModule.setTimeline(user);
+timelineModule.setHeader();
+timelineModule.setTimeline();
 ```
 
 If you load index.html in your web browser, then you will see an empty page. Looking at the developer tools of your web browser will tell you the error.
