@@ -115,8 +115,8 @@ var user = {
 };
 
 var timelineModule = new timeline(user);
-timelineModule.setHeader(user);
-timelineModule.setTimeline(user);
+timelineModule.setHeader();
+timelineModule.setTimeline();
 ```
 
 If you load index.html in your web browser, then you will see an empty page. Looking at the developer tools of your web browser will tell you the error.
@@ -264,8 +264,8 @@ var user = {
 
 debugger;
 var timelineModule = new timeline(user);
-timelineModule.setHeader(user);
-timelineModule.setTimeline(user);
+timelineModule.setHeader();
+timelineModule.setTimeline();
 ```
 
 Reload the page and the browser will stop the application at the debug location.
@@ -291,8 +291,8 @@ var user = {
 };
 
 var timelineModule = new timeline(user);
-timelineModule.setHeader(user);
-timelineModule.setTimeline(user);
+timelineModule.setHeader();
+timelineModule.setTimeline();
 ```
 
 webpack will reload the changes, and you will see error in the console as shown below.
