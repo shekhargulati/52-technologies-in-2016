@@ -245,6 +245,7 @@ Now if you compile the project using `compile` task you will see that project is
 ```
 
 > From the [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html): If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.
+> Because `compile` is a dependency of `run`, you don’t have to run `compile` before each `run`; just type `sbt run`.
 
 ### Building Tasky application
 
