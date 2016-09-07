@@ -244,7 +244,8 @@ Now if you compile the project using `compile` task you will see that project is
 [success] Total time: 8 s, completed 10 Jan, 2016 1:30:06 PM
 ```
 
-> From the [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html): If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.
+> From the [sbt documentation](http://www.scala-sbt.org/0.13/docs/Howto-Scala.html): If the Scala version is not specified, the version sbt was built against is used. It is recommended to explicitly specify the version of Scala.  
+> Please note that because `compile` is a dependency of `run`, you don’t have to run `compile` before each `run`; just type `sbt run`.
 
 ### Building Tasky application
 
