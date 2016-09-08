@@ -39,7 +39,7 @@ Below is the list of technologies covered in this series:
   * **[Tweet Deduplication](./11-tweet-deduplication/README.md)**: This week I decided to write a tweet deduplication library. The library will give you a stream of deduplicated tweets.
   * **[TextBlob](./11-textblob/README.md)**. TextBlob is an open source text processing library written in Python. It can be used to perform various natural language processing tasks such as part-of-speech tagging, noun-phrase extraction, sentiment analysis, text translation, and many more.
 
-12. **[Week 12: March 20, 2016](https://github.com/shekhargulati/play-the-missing-tutorial)** [Play Framework](https://github.com/shekhargulati/play-the-missing-tutorial). Play framework is a MVC style web application framework for JVM. It provides API for both Java and Scala programming languages. I am maintaining this tutorial in a separate [Github repository](https://github.com/shekhargulati/play-the-missing-tutorial).
+12. **[Week 12: March 20, 2016](https://github.com/shekhargulati/play-the-missing-tutorial)** [Play Framework](https://github.com/shekhargulati/play-the-missing-tutorial). Play framework is a MVC style web application framework for JVM. It provides API for both Java and Scala programming languages. I am maintaining this tutorial in a separate [GitHub repository](https://github.com/shekhargulati/play-the-missing-tutorial).
 
 13. **[Week 13: March 27, 2016](./13-arangodb)** [ArangoDB: Polyglot Persistence Without Cost](./13-arangodb/README.md). ArangoDB is an open source NoSQL database that provides flexible data model. You can use ArangoDB to model data using combination of document, graph, and key value data modeling styles.
 
