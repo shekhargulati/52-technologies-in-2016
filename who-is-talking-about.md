@@ -7,7 +7,7 @@ What People Are Saying About 52-technologies-in-2016 series?
 2. [HackerNews mention](https://news.ycombinator.com/item?id=11559777)
 3. [TheChangeLog March NewsLetter](http://email.changelog.com/t/ViewEmail/t/C919E40148EF9E0B/B7C81A4C9BD39AC4C68C6A341B5D209E)
 4. HackerNews Front page [https://news.ycombinator.com/item?id=12430479](https://news.ycombinator.com/item?id=12430479)
-5.
+
 
 Popular Tweets
 ---
