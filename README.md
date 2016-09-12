@@ -87,6 +87,8 @@ Below is the list of technologies covered in this series:
 
 35. **[Week 36: September 04, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/36-webpack)** [Webpack: The Missing Tutorial](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/36-webpack/README.md). webpack takes modules with dependencies and generates static assets representing those modules.
 
+36. **[Week 37: September 11, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/37-spring-boot-scala)** [Building "Bootiful" Scala Web Applications with Spring Boot](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/37-spring-boot-scala/README.md). In this post, I will quickly show you how to use Spring Boot with Scala by converting Spring Boot's official *Building a RESTful Web Service* guide to Scala.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
