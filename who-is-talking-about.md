@@ -10,6 +10,9 @@ What People Are Saying About 52-technologies-in-2016 series?
 5. Week 2 SBT tutorial is mentioned recommended by [Coursera Scala course taught by Martin Odersky](https://www.coursera.org/learn/progfun1/supplement/uV974/sbt-tutorial).
 6. Week 7 Hugo post became [official Hugo quickstart](http://gohugo.io/overview/quickstart/)
 7. [ChangeLog Issue 122](http://email.changelog.com/t/ViewEmail/t/DFC70C605DFB76A1/B7C81A4C9BD39AC4C68C6A341B5D209E), September 11th 2016 again mentioned 52-technologies-in-2016 series.
+8. [A guy wrote a short post](http://www.briandupreez.net/2016/09/re-inspired.html) on 52-technologies-in-2016 giving him inspiration to get back to blogging.
+9. [SDTimes mentioned](http://sdtimes.com/sd-times-github-project-week-quill/) 52-technologies-in-2016 series in their Github project of the week.
+10. [A beginner's reference guide to TypeScript Language](http://www.jjude.com/ts/) mentions 52-technologies-in-2016 week 17 blog on TypeScript post.
 
 
 Popular Tweets
