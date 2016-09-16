@@ -219,7 +219,7 @@ object Application extends App {
 class Application
 ```
 
-## Step 6: Run the application
+## Step 7: Run the application
 
 Execute the command shown below to run the Spring Boot application.
 
