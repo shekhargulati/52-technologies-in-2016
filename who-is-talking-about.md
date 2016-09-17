@@ -13,7 +13,7 @@ What People Are Saying About 52-technologies-in-2016 series?
 8. [A guy wrote a short post](http://www.briandupreez.net/2016/09/re-inspired.html) on 52-technologies-in-2016 giving him inspiration to get back to blogging.
 9. [SDTimes mentioned](http://sdtimes.com/sd-times-github-project-week-quill/) 52-technologies-in-2016 series in their Github project of the week.
 10. [A beginner's reference guide to TypeScript Language](http://www.jjude.com/ts/) mentions 52-technologies-in-2016 week 17 blog on TypeScript post.
-11. A [Russian blogger talking](http://artemdemo.me/blog/%D1%83%D1%87%D0%B8%D0%BC-52-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B2-2016/) posted about 52-technologies-in-2016 series
+11. A [Russian blogger talking](http://artemdemo.me/blog/%D1%83%D1%87%D0%B8%D0%BC-52-%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B2-2016/) about 52-technologies-in-2016 series
 12. A [German blogger](https://boehrsi.de/?action=c-public_blog-post&id=2830&content=52_neue_technologien_lernen_mit_shekhar_gulati) posted about 52-technologies-in-2016
 
 
