@@ -365,7 +365,7 @@ class TaskManagerSpec extends FlatSpec with Matchers {
 }
 ```
 
-To run the test you can execute the run task.
+To run the test you can execute the test task.
 
 ```
 > test
