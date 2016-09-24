@@ -142,7 +142,7 @@ To make sure I give sufficient time to ActorSystem for termination I changed dur
 
 This looked to us a deadlock where `ActorSystem` waits for all actors to terminate and Actor is waiting for system to exit.
 
-To solve this use case, we scheduled the JVM exit using the ActorSystem `scheduler`. This meant `App1ControlActor` can successfully does not have to wait for JVM to exit. Hence, avoiding dead lock.
+To solve this use case, we scheduled the JVM exit using the ActorSystem `scheduler`. This meant `App1ControlActor` can successfully shut down and does not have to wait for JVM to exit. Hence, avoiding dead lock.
 
 ```scala
 class App1ControlActor extends Actor {
