@@ -91,6 +91,8 @@ Below is the list of technologies covered in this series:
 
 37. **[Week 38: September 18, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/38-akka)** [Actor System Termination on JVM Shutdown](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/38-akka/README.md). In this short post, I will discuss how to cleanly shutdown Akka ActorSystem on JVM exit.
 
+38. **[Week 39: October 07, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/39-docker)** [Docker for Java Developers Part 1](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/39-docker/README.md). This week I had to give a talk on Docker ecosystem so I spent a lot of my after office hours preparing for the talk. [Docker](http://docker.com/) is a container technology that allows us to package an application and its dependencies together in a filesystem so that they can be deployed together on any server. This helps us achieve package once deploy anywhere. So, in the next few posts of this series, we will learn how Java developers can get started with Docker.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
