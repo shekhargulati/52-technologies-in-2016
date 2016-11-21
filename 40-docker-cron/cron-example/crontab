@@ -1,0 +1,2 @@
+* * * * * root /usr/local/bin/python /app/app.py >> /var/log/cron.log 2>&1
+# You need an empty line at the end of the file so that it is considered a valid cron file.

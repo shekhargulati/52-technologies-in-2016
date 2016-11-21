@@ -489,6 +489,16 @@ Now, we will use volume to provide HSQL a directory on host system where it can 
 $ docker run -it -d --read-only -p 9080:8080 -v /tmp -v ~/docker/data:/data com.shekhargulati/taskman:1.0.0 --spring.datasource.url=jdbc:hsqldb:file:/data/taskman-db
 ```
 
+> **It is also a good idea to add a bash function that remove dangling images and volumes and  stopped containers as shown below. Thanks [Xinjiang Shao](https://github.com/soleo) for suggesting this tip.**
+
+> ```
+  docker-cleanup() {
+      docker rm $(docker ps -a -q);
+      docker rmi $(docker images -q -f dangling=true);
+      docker volume rm $(docker volume ls -qf dangling=true)
+  }
+  ```
+
 ----
 
 That's all for this week. In the next post, we will learn how to use MySQL database with our application. We will cover Docker networking basics that makes multi container applications tick.

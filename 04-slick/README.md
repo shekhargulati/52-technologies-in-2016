@@ -129,7 +129,7 @@ object DataModel {
 
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
 
-    override def * : ProvenShape[Task] = (title, description, createdAt, dueBy, tags, id) <>(Task.tupled, Task.unapply)
+    override def * = (title, description, createdAt, dueBy, tags, id) <>(Task.tupled, Task.unapply)
   }
 }
 ```

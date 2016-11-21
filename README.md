@@ -93,6 +93,8 @@ Below is the list of technologies covered in this series:
 
 38. **[Week 39: October 07, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/39-docker)** [Docker for Java Developers Part 1](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/39-docker/README.md). This week I had to give a talk on Docker ecosystem so I spent a lot of my after office hours preparing for the talk. [Docker](http://docker.com/) is a container technology that allows us to package an application and its dependencies together in a filesystem so that they can be deployed together on any server. This helps us achieve package once deploy anywhere. So, in the next few posts of this series, we will learn how Java developers can get started with Docker.
 
+39. **[Week 40: October 19, 2016](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/40-docker-cron)** [Using Docker Containers As Cron Jobs](https://github.com/shekhargulati/52-technologies-in-2016/tree/master/40-docker-cron/README.md): This week I was working on a problem that required cron jobs. The use case was that after user registers with the application, we will create a cron job that will track his/her social activities. We will have one container per user. I wanted to keep cron jobs to work in a different process from the main application so that different concerns of the application don't intermingle. In my view, containers provide the right abstraction to solve this use case.
+
 -----------
 You can follow me on twitter at [https://twitter.com/shekhargulati](https://twitter.com/shekhargulati) or email me at <shekhargulati84@gmail.com>. Also, you can read my blogs at [http://shekhargulati.com/](http://shekhargulati.com/)
 
