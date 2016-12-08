@@ -219,7 +219,7 @@ object Tasky extends App {
 }
 ```
 
-You will notice that all 100 started at almost same time.  If you run this with default configuration 24(`parallelism-factor*parallelism-min`) tasks will be processed in parallel.
+You will notice that all 100 started at almost same time.  If you run this with default configuration 24(`parallelism-factor*number_of_cores`) tasks will be processed in parallel.
 
 ```
 // part of output
@@ -307,7 +307,7 @@ task-dispatcher {
 }
 ```
 
-When you run the code now, you will see dynamic nature of `thread-pool-executor` in action. `thread-pool-executor` will create 24 threads as configured using `core-pool-size`. The first 24 tasks will be executed by these 24 threads. After the first 24 tasks, `thread-pool-executor` will wait till queue has 20 messages. Once queue is full, `thread-pool-executor` will use the `max-pool-size` configuration to create threads. This will go on until we reach 81 tasks. After that task-queue-size will go below 20 so remaining 19 tasks will be executed after threads are freed. 
+When you run the code now, you will see dynamic nature of `thread-pool-executor` in action. `thread-pool-executor` will create 24 threads as configured using `core-pool-size`. The first 24 tasks will be executed by these 24 threads. After the first 24 tasks, `thread-pool-executor` will wait till queue has 20 messages. Once queue is full, `thread-pool-executor` will use the `max-pool-size` configuration to create threads. This will go on until we reach 81 tasks. After that task-queue-size will go below 20 so remaining 19 tasks will be executed after threads are freed.
 
 ----
 
