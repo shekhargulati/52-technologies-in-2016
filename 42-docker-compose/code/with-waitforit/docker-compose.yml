@@ -1,0 +1,17 @@
+version: '2'
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: taskman
+  web:
+    build: .
+    entrypoint: ./wait-for-it.sh db:3306 --strict -- java -jar taskman.jar --spring.profiles.active=docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - TASKMAN_DB_PASSWORD=password
