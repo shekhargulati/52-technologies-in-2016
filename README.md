@@ -4,6 +4,8 @@
 
 I have taken a challenge to learn a new technology every week in 2016. The goal is to learn a new technology, build a simple application using it, and blog about it.
 
+> **I have decided to discontinue this series after writing 42 blogs. No more blogs will be published in this series. Thanks for your support.**
+
 ## Contributing to the 52 technologies in 2016 series
 
 Please contribute if you see an error or something that could be better! Raise an [issue](https://github.com/shekhargulati/52-technologies-in-2016/issues) or send me a pull request to improve. Contributions of all kinds, including corrections, additions, improvements, and translations, are welcome!
