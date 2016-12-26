@@ -3,7 +3,7 @@ GraphQL - building a pokedex in React with GraphQL
 
 Welcome to the forty-third post of the [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) series. This week, we will explore [GraphQL](http://graphql.org), a query language that is starting to get more and more attention. Facebook, who internally used GraphQL since 2012 and released a first specification and reference implementation of GraphQL in 2015 announced GraphQL to be [production ready] in September 2016. What followed is a trend of more and more companies starting to use GraphQL, such as [GitHub](https://youtu.be/hT-4pVmkGt0), [Coursera](https://youtu.be/JC-UJwBKc2Y) and [Shopify](https://youtu.be/Wlu_PWCjc6Y).
 
-In this post we will explore GraphQL by building a pokedex application with GraphQL. You can find an interactive, read-only demo of the pokedex at [http://demo.learnapollo.com]/
+In this post we will explore GraphQL by building a pokedex application with GraphQL. You can find an interactive, read-only demo of the pokedex [here](http://demo.learnapollo.com).
 
 ![](./images/pokedex.png)
 
@@ -256,6 +256,8 @@ To make use of Apollo, we initialize a new client and connect it to our GraphQL 
 
 This leads us to the following route setup in `index.js`:
 
+<details>
+<summary>index.js</summary>
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -285,6 +287,7 @@ ReactDOM.render((
   document.getElementById('root')
 )
 ```
+</details>
 
 We use the function `dataIdFromObject` to define how a node can be identified. In our case, all nodes have a unique `id` field so we can use it for this purpose.
 
@@ -292,8 +295,10 @@ We use the function `dataIdFromObject` to define how a node can be identified. I
 
 ![](./images/pokemonpage.png)
 
-Let's have a closer look at the `PokemonPage` component now, where we display details of one specific pokemon.
+Let's have a closer look at the `PokemonPage` component now, where we display details of a specific pokemon.
 
+<details>
+<summary>PokemonPage.js</summary>
 ```js
 import React from 'react'
 import { withRouter } from 'react-router'
@@ -336,11 +341,14 @@ class PokemonPage extends React.Component {
   }
 }
 ```
+</details>
 
 Note the special `data` object that we define as part of the props. This prop will be injected by Apollo after sending a query. It contains information on the loading or error status of the query in `data.loading` and `data.error` respectively. In the render method, we see that we can use `data.loading` to render a loading state until the query response comes in that we can use to pass the `pokemon` obtained from the query down to another component, `PokemonCard` in this case.
 
 So how do we actually send the query resulting in the response `data`? First, we can use the `gql` function from `graphql-tag` to define a query:
 
+<details>
+<summary>PokemonQuery</summary>
 ```js
 const PokemonQuery = gql`query PokemonQuery($id: ID!) {
     Pokemon(id: $id) {
@@ -351,10 +359,13 @@ const PokemonQuery = gql`query PokemonQuery($id: ID!) {
   }
 `
 ```
+</details>
 
 Note that the query receives the `id` variable that we can use to select the specific pokemon we want to query.
 We can then send this query and inject its response to the `PokemonPage` component by using the `graphql` function from `react-apollo`:
 
+<details>
+<summary>PokemonPage.js</summary>
 ```js
 const PokemonPageWithData = graphql(PokemonQuery, {
   options: (ownProps) => ({
@@ -367,6 +378,7 @@ const PokemonPageWithData = graphql(PokemonQuery, {
 
 export default PokemonPageWithData
 ```
+</details>
 
 Note how we can access the router parameters with `ownProps.params` to use the path variable as the `id` variable for our `PokemonQuery`.
 
@@ -376,6 +388,8 @@ Note how we can access the router parameters with `ownProps.params` to use the p
 
 Let's see how we can use mutations with Apollo Client by looking a the `AddPokemonCard` component. Again, we can define the mutation with `gql`:
 
+<details>
+<summary>createPokemonMutation</summary>
 ```js
 const createPokemonMutation = gql`
   mutation createPokemon($name: String!, $url: String!, $trainerId: ID) {
@@ -390,17 +404,23 @@ const createPokemonMutation = gql`
   }
 `
 ```
+</details>
 
 This time, we define the `name`, `url` and `trainerId` variables for the mutation, which is the needed information for the `createPokemon` mutation, as seen in the last section. When we use `graphql` now to wrap the existing `AddPokemonCard` component with the mutation, we don't specify the mutation variables yet:
 
+<details>
+<summary>AddPokemonCard.js</summary>
 ```js
 const AddPokemonCardWithMutation = graphql(createPokemonMutation)(withRouter(AddPokemonCard))
 
 export default AddPokemonCardWithMutation
 ```
+</details>
 
 Instead of injecting a `data` prop as before, wrapping mutations will inject a `mutate` prop that can be used to actually fire the mutation. We can see that in the `handleSave` function of the `AddPokemonCard` component:
 
+<details>
+<summary>AddPokemonCard.js</summary>
 ```js
 handleSave = () => {
   const {name, url} = this.state
@@ -411,7 +431,14 @@ handleSave = () => {
     })
 }
 ```
+</details>
 
 We take the currently entered information for the `name` and `url` input elements and the path variable `trainerId` and use them for our mutation. Calling the `mutate` function with these variables will return a promise that we can use to navigate back to the `Pokedex` component where now a new pokemon should be displayed.
 
 ## Wrap Up
+
+That's it! In this blog post, we saw how we can send GraphQL queries and mutations using Apollo Client in React. The best way to learn more about GraphQL and Apollo is [Learn Apollo](https://learnapollo.com), featuring a hands-on tutorial where you will build a fully-featured pokedex application in multiple technologies such as React, React Native or ExponentJS.
+
+To setup a GraphQL backend in minutes, check out [Graphcool](https://graph.cool) enabling you to implement your business logic with any language and includes realtime subscriptions, user management, service integrations and more.
+
+[![](http://i.imgur.com/FxHTGm4.png)](https://www.youtube.com/watch?v=wSkZFfuAToM)
