@@ -146,7 +146,7 @@ You should see this result:
 ```
 </details>
 
-Just like with normal fields, we can even select related nodes in our query. This dramatically decreases the amount of queries needed and allows for quick prototyping and development of frontend applications. Instead of the time-draining skimming through dozens of potential endpoints, you can simply explore the possible queries interactively which has a great effect on developer experience.
+Just like with normal fields, we can even select related nodes in our query. This dramatically decreases the number of queries needed and allows for quick prototyping and development of frontend applications. Instead of the time-draining skimming through dozens of potential endpoints, you can simply explore the possible queries interactively which has a great effect on developer experience.
 
 Let's try another query that fetches a single trainer object. Our GraphQL server exposes the `Trainer` query to fetch specific trainer nodes. We can either specify the trainer by an `id` or a `name`. Let's fetch all information on the trainer `Ash Ketchum`:
 
