@@ -217,7 +217,7 @@ func TestThreeEqualNumbers(t *testing.T) {
 }
 ```
 
-When you will run the go test command now with `-v` option you will see a much better test output. Please note you have to run tests in verbose mode to see the log messages. If you remote `-v` option, your tests will not print log statements.
+When you will run the go test command now with `-v` option you will see a much better test output. Please note you have to run tests in verbose mode to see the log messages. If you remove `-v` option, your tests will not print log statements.
 
 ```bash
 $ go test -v -run TestThreeEqualNumbers
