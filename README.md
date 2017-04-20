@@ -1,5 +1,5 @@
 
-52 technologies in 2016 [![GitHub Stats](https://img.shields.io/badge/github-stats-brightgreen.svg)](http://githubstats.com/shekhargulati/52-technologies-in-2016)![SayThanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)
+52 technologies in 2016 [![GitHub Stats](https://img.shields.io/badge/github-stats-brightgreen.svg)](http://githubstats.com/shekhargulati/52-technologies-in-2016)  [![SayThanks](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/shekhargulati)
 --------
 
 I have taken a challenge to learn a new technology every week in 2016. The goal is to learn a new technology, build a simple application using it, and blog about it.
