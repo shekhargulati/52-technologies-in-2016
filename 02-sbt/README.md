@@ -50,7 +50,7 @@ If you are on mac then, you can use package manager like `brew` to install `sbt`
 $ brew install sbt
 ```
 
-For other systems, download the latest version of sbt from the [website](http://www.scala-sbt.org/download.html). Current production version is `0.13.9`. You can download by clicking [https://dl.bintray.com/sbt/native-packages/sbt/0.13.9/sbt-0.13.9.zip](https://dl.bintray.com/sbt/native-packages/sbt/0.13.9/sbt-0.13.9.zip).
+For other systems, download the latest version of sbt from the [website](http://www.scala-sbt.org/download.html). Current production version is `0.13.16`. You can download by clicking [https://cocl.us/sbt01316zip](https://cocl.us/sbt01316zip).
 
 You can refer to manual instructions from `sbt` website http://www.scala-sbt.org/0.13/tutorial/Manual-Installation.html. This blog is written using sbt version `0.13.9`.
 
