@@ -33,7 +33,7 @@ To use Gatling, you need to have at least **JDK7u6** installed on your operating
 
 Gatling can be used in two ways:
 
-1. You can create a Scala SBT/Maven/Gradle project and write load test scenarios using its Scala DSL. In this blog, we will use SBT. Create a new directory named `blog` on your filesystem and change directory to it. Create a `build.sbt` file and populate it with following content. Now we will write load test scenarios using Gatling Scala DSL. In this blog, we will use approach. We are adding required Gatling dependencies in the `build.sbt`.
+1. You can create a Scala SBT/Maven/Gradle project and write load test scenarios using its Scala DSL. In this blog, we will use SBT. Create a new directory named `blog` on your filesystem and change directory to it. Create a `build.sbt` file and populate it with following content. Now we will write load test scenarios using Gatling Scala DSL. In this blog, we will use this approach. We are adding required Gatling dependencies in the `build.sbt`.
   ```scala
   name := "blog-load-tests"
   version := "0.1.0"
