@@ -1,7 +1,7 @@
 SBT: The Missing Tutorial
 ---
 
-Welcome to the second blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. From last year, I have started using Scala as my main programming language. One of the tools that you have to get used to while working with a programming language is a build tool. In my office projects, we use Gradle for all our projects be it Scala or Java. In most of my personal Scala projects, I have started using `sbt` as my preferred build tool. **`sbt` is a general purpose build tool written in Scala**. Most of the time we try to hack our way while using a build tool never learning it properly. As Scala will be the language that I will cover most in this series, I decided to thoroughly learn `sbt` this week. We(developers) often underestimate the importance of learning a build tool thoroughly and end up not using build tool in the most effective way. Good working knowledge of a build tool can make us more productive so we should take it seriously.
+Welcome to the second blog of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. From last year, I have started using Scala as my main programming language. One of the tools that you have to get used to while working with a programming language is a build tool. In my office projects, we use Gradle for all our projects be it Scala or Java. In most of my personal Scala projects, I have started using `sbt` as my preferred build tool. **`sbt` is a general purpose build tool written in Scala**. Most of the time we try to hack our way while using a build tool never learning it properly. As Scala will be the language that I will cover most in this series, I decided to thoroughly learn `sbt` this week. We (developers) often underestimate the importance of learning a build tool thoroughly and end up not using build tool in the most effective way. Good working knowledge of a build tool can make us more productive so we should take it seriously.
 
 > **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
@@ -13,8 +13,8 @@ We will cover the following in this tutorial:
 * [Install sbt on your machine](#install-sbt-on-your-machine)
 * [Getting started with sbt](#getting-started-with-sbt)
 * [sbt modes](#sbt-modes)
-* [Create a SBT Scala project](#create-a-sbt-scala-project)
-  * [Sbt says Hello](#sbt-says-hello)
+* [Create an sbt Scala project](#create-a-sbt-scala-project)
+  * [sbt says Hello](#sbt-says-hello)
   * [Set Scala version](#set-scala-version)
   * [Building Tasky application](#building-tasky-application)
     * [Add dependencies](#add-dependencies)
@@ -26,7 +26,7 @@ We will cover the following in this tutorial:
 
 ## What is sbt?
 
-sbt i.e. Simple Build Tool is a general purpose build tool written in Scala for JVM developers. It borrows good ideas from other successful build tools like Ant, Maven, and Gradle.
+`sbt` i.e. Simple Build Tool is a general purpose build tool written in Scala for JVM developers. It borrows good ideas from other successful build tools like Ant, Maven, and Gradle.
 
 1. Default project layouts
 2. Built-in tasks
@@ -36,15 +36,14 @@ sbt i.e. Simple Build Tool is a general purpose build tool written in Scala for 
 
 Apart from the feature set mentioned above `sbt` also provides the following additional features:
 
-1. Interactive nature: It isn't just a build tool, it also provides an interactive environment to work in.
-
+1. Interactive nature: It isn't just a build tool, it also provides an interactive environment to work in
 2. Scala REPL integration
 
 <img src="http://www.scala-sbt.org/assets/typesafe_sbt_svg.svg" height="100" width="100" align="middle">
 
 ## Install sbt on your machine
 
-If you are on mac then, you can use package manager like `brew` to install `sbt` on your machine.
+If you are on mac then, you can use package manager like `brew` to install `sbt` on your machine:
 
 ```bash
 $ brew install sbt
@@ -56,7 +55,7 @@ You can refer to manual instructions from `sbt` website http://www.scala-sbt.org
 
 Once you have successfully installed `sbt` on your machine, create an empty directory somewhere in your file system which we will use for this blog.
 
-To view the basic information about `sbt`, we can use `about` task. The `sbt about` task and its output is shown below.
+To view the basic information about `sbt`, we can use `about` task. The `sbt about` task and its output is shown below:
 
 ```
 $ sbt about
@@ -75,15 +74,15 @@ As you can see in the second line of the output we are using sbt version 0.13.9.
 
 ## Getting started with sbt
 
-sbt terminology consists of two terms -- task and settings. A task defines an action which you want to perform like compile. A setting is used to define a value for example name and version of the project.
+`sbt` terminology consists of two terms -- **tasks** and **settings**. A task defines an action which you want to perform like compile. A setting is used to define a value for example name and version of the project.
 
-With `sbt` whenever you want to perform any action you execute a task. Task is the unit of currency in `sbt`. A task can depend on another task to do its job. `sbt` creates a task dependency graph to determine which task should run first. If task `t1` depends on task `t2` then task `t2` will be executed first and then task `t1` will be executed. You can view all the tasks applicable to a project by running `sbt tasks` task.
+With `sbt` whenever you want to perform any action you execute a task. Task is the unit of currency in `sbt`. A task can depend on another task to do its job. `sbt` creates a task dependency graph to determine which task should run first. If task `t1` depends on task `t2` then task `t2` will be executed first and then task `t1` will be executed. You can view all the tasks applicable to a project by running `sbt tasks` task:
 
 ```bash
 $ sbt tasks
 ```
 
-The above task will produce the following output.
+The above task will produce the following output:
 
 ```
 [info] Set current project to code (in build file:/Users/shekhargulati/blogs/tasky/)
@@ -120,18 +119,18 @@ Tasks produce values.  Use the 'show' task to run the task and print the resulti
 
 You can use `sbt` in two modes -- command-line mode and interactive mode. In the command-line mode, you run `sbt` task from your machine terminal. Once the task successfully finishes then `sbt` exits. For example, when you ran `sbt about` task, it printed `sbt` and build information on the console and then `sbt` exited and you were back to your terminal. In the interactive mode, you run `sbt` command and it launches a `sbt` shell. Inside the `sbt` shell session, you run `sbt` tasks.
 
-## Create a sbt Scala project
+## Create an sbt Scala project
 
-In this tutorial, we will build a simple task management app -- `tasky`. A task management app will allow us to work with our daily to-do items. Create a new directory `tasky` at any convenient location on your filesystem. Once created, change directory to `tasky`.
+In this tutorial, we will build a simple task management app -- `tasky`. A task management app will allow us to work with our daily to-do items. Create a new directory `tasky` at any convenient location on your filesystem. Once created, change directory to `tasky`:
 
 ```bash
 $ mkdir tasky
 $ cd tasky
 ```
 
-> Code for demo application is on [Github](./tasky)
+> Code for demo application is on [GitHub](./tasky)
 
-Inside the `tasky` directory, create a new file -- `build.sbt` to house the build script. build.sbt is the name of a sbt build script. The content of `build.sbt` is shown below.
+Inside the `tasky` directory, create a new file -- `build.sbt` to house the build script. `build.sbt` is the name of the sbt build script. The content of `build.sbt` is shown below:
 
 ```scala
 name := "tasky"
@@ -140,7 +139,7 @@ version := "0.1.0"
 
 `:=` is a function defined in the `sbt` library. It is used to define a setting that overwrites any previous value without referring to other settings. For example, `name := "tasky"` will overwrite any previous value set in the `name` variable.
 
-Now, run the `sbt` command.
+Now, run the `sbt` command:
 
 ```
 $ sbt
@@ -148,7 +147,7 @@ $ sbt
 >
 ```
 
-Once you are inside the `sbt` shell, you can run various `sbt` tasks. To view all the tasks available you can use `help` task.
+Once you are inside the `sbt` shell, you can run various `sbt` tasks. To view all the tasks available you can use `help` task:
 
 ```bash
 > help
@@ -182,7 +181,7 @@ More task help available using 'help <task>' for:
   !, +, ++, <, alias, append, apply, eval, iflast, onFailure, reboot, shell
 ```
 
-By default, `sbt` follows Maven project layout i.e. Scala source files are placed inside `src/main/scala` and test source files are placed inside `src/test/scala`.
+By default, `sbt` follows Maven project layout i.e. Scala source files are placed inside `src/main/scala` and test source files are placed inside `src/test/scala`:
 
 ```bash
 $ mkdir -p src/main/scala
@@ -191,7 +190,7 @@ $ mkdir -p src/test/scala
 
 ### sbt says Hello
 
-Now, let's create a new Scala file `HelloSbt.scala` inside `src/main/scala` and place the following contents in it.
+Now, let's create a new Scala file `HelloSbt.scala` inside `src/main/scala` and place the following contents in it:
 
 ```scala
 object HelloSbt extends App {
@@ -199,7 +198,7 @@ object HelloSbt extends App {
 }
 ```
 
-Now you can run the code from inside the `sbt` shell by first compiling the code using `compile` task and then running it using the `run` task as shown below.
+Now you can run the code from inside the `sbt` shell by first compiling the code using `compile` task and then running it using the `run` task as shown below:
 
 ```
 > compile
@@ -224,14 +223,14 @@ version := "0.1.0"
 scalaVersion := "2.11.6"
 ```
 
-`sbt` will not pick any change in the `build.sbt` until you run the `reload` task. Execute the `reload` task to refresh the `sbt` shell with new build script.
+`sbt` will not pick any change in the `build.sbt` until you run the `reload` task. Execute the `reload` task to refresh the `sbt` shell with new build script:
 
 ```
 > reload
 [info] Set current project to tasky (in build file:/Users/shekhargulati/blogs/tasky/)
 ```
 
-Now if you compile the project using `compile` task you will see that project is compiled using scala `2.11.6` version.
+Now if you compile the project using `compile` task you will see that project is compiled using scala `2.11.6` version:
 
 ```
 > compile
@@ -259,7 +258,7 @@ case class Task(title: String, dueOn: LocalDate, tags: Seq[String] = Seq(), fini
 
 > Please note we are using Java 8 Date-Time API. If you want to learn Java 8, then you can refer to my Java 8 tutorial  [https://github.com/shekhargulati/java8-the-missing-tutorial](https://github.com/shekhargulati/java8-the-missing-tutorial)
 
-If you are inside the `sbt` shell, then you can compile the code using `compile` task. To experiment with your data model, you can use `sbt` in an interactive mode by executing the `console` task from within the `sbt` shell.
+If you are inside the `sbt` shell, then you can compile the code using `compile` task. To experiment with your data model, you can use `sbt` in an interactive mode by executing the `console` task from within the `sbt` shell:
 
 ```
 > console
@@ -276,7 +275,7 @@ Type :help for more information.
 scala>
 ```
 
-Now you can start using `Task` class. Let's create a task.
+Now you can start using `Task` class. Let's create a task:
 
 ```scala
 scala> import java.time.{LocalDate,Month}
@@ -289,7 +288,7 @@ scala> val t2 = Task("Write a factorial program", LocalDate.of(2016,Month.JANUAR
 t2: Task = Task(Write a factorial program,2016-01-11,List(coding),false)
 ```
 
-We can find all the tasks which are due today by writing the following code.
+We can find all the tasks which are due today by writing the following code:
 
 ```scala
 scala> val tasks = Seq(t1,t2)
@@ -301,7 +300,7 @@ res3: Seq[Task] = List(Task(Write blog on SBT,2016-01-10,List(blogging),false))
 
 This is the kind of experiment driven development that sbt promotes. Once you have a rough idea of what you want to do then, you can start using the TDD approach to get things done.
 
-Create a new scala file `taskmanager.scala` inside `src/main/scala` and place the following content.
+Create a new scala file `taskmanager.scala` inside `src/main/scala` and place the following content:
 
 ```scala
 object TaskManager {
@@ -315,21 +314,21 @@ In the code shown above, we have created a scala object `TaskManager` which defi
 
 #### Add Dependencies
 
-To add `scalatest` dependency to your Scala sbt project, add the following line to `build.sbt`. sbt uses Apache Ivy dependency manager to perform automatic dependency management.
+To add `scalatest` dependency to your Scala sbt project, add the following line to `build.sbt`. `sbt` uses Apache Ivy dependency manager to perform automatic dependency management:
 
 ```scala
 libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
 ```
 
-sbt exposes keys that are defined in [Keys.scala](http://www.scala-sbt.org/0.13/sxr/sbt/Keys.scala.html) to build.sbt. Keys are of three types: Setting Key, Task Key, and Input Key. From the [sbt documentation](http://www.scala-sbt.org/release/tutorial/Basic-Def.html),
+`sbt` exposes keys that are defined in [Keys.scala](http://www.scala-sbt.org/0.13/sxr/sbt/Keys.scala.html) to `build.sbt`. Keys are of three types: Setting Key, Task Key, and Input Key. From the [sbt documentation](http://www.scala-sbt.org/release/tutorial/Basic-Def.html),
 
-* SettingKey[T]: a key for a value computed once (the value is computed when loading the project, and kept around).
+* `SettingKey[T]`: a key for a value computed once (the value is computed when loading the project, and kept around).
 
-* TaskKey[T]: a key for a value, called a task, that has to be recomputed each time, potentially with side effects.
+* `TaskKey[T]`: a key for a value, called a task, that has to be recomputed each time, potentially with side effects.
 
-* InputKey[T]: a key for a task that has task line arguments as input.
+* `InputKey[T]`: a key for a task that has task line arguments as input.
 
-Syntax to add a library to build.sbt looks like as shown below.
+Syntax to add a library to build.sbt looks like as shown below:
 
 ```
 libraryDependencies += groupID % artifactID % version % configuration
@@ -337,7 +336,7 @@ libraryDependencies += groupID % artifactID % version % configuration
 
 `configuration` is not required for all dependencies. For `scalatest` dependency we have used `test` configuration.
 
-`libraryDependencies` is a SettingKey that stores all declared managed dependencies. This key is populated only once when a project is loaded and then it is reused. Whenever you add a dependency in `build.sbt` file then you have to call the reload task to update dependencies.
+`libraryDependencies` is a SettingKey that stores all declared managed dependencies. This key is populated only once when a project is loaded and then it is reused. Whenever you add a dependency in `build.sbt` file then you have to call the reload task to update dependencies:
 
 ```
 > reload
@@ -350,7 +349,7 @@ libraryDependencies += groupID % artifactID % version % configuration
 
 Let's write a test for `TaskManager` `allTasksDueToday` method. There are various testing styles that you can use with `scalatest`. In this tutorial, I am using `FlatSpec` style. You can refer to [scalatest documentation for more information](http://www.scalatest.org/user_guide/selecting_a_style).
 
-Create `src/test/scala/TaskManagerSpec.scala` and add the following code to it.
+Create `src/test/scala/TaskManagerSpec.scala` and add the following code to it:
 
 ```scala
 import org.scalatest._
@@ -365,7 +364,7 @@ class TaskManagerSpec extends FlatSpec with Matchers {
 }
 ```
 
-To run the test you can execute the test task.
+To run the test you can execute the test task:
 
 ```
 > test
@@ -393,7 +392,7 @@ To run the test you can execute the test task.
 
 One of the coolest features of `sbt` is that it can rerun your tasks without manual intervention whenever any project source file changes. This is enabled using the `~` operator. If you prefix any sbt task with `~` then `sbt` will wait for changes in the source files. As soon as any file changes, it will rerun that task.
 
-Type the `~test` command inside `sbt` shell.
+Type the `~test` command inside `sbt` shell:
 
 ```
 > ~test
@@ -457,7 +456,7 @@ As soon as you save the file, `sbt` will detect file content change and rerun al
 2. Waiting for source changes... (press enter to interrupt)
 ```
 
-Let's add the actual implementation to `allTasksDueToday` method.
+Let's add the actual implementation to `allTasksDueToday` method:
 
 ```scala
 import java.time.LocalDate
@@ -469,7 +468,7 @@ object TaskManager {
 }
 ```
 
-Now, tests will pass and you will see the following output in the sbt console.
+Now, tests will pass and you will see the following output in the sbt console:
 
 ```
 2. Waiting for source changes... (press enter to interrupt)
@@ -490,12 +489,12 @@ Now, tests will pass and you will see the following output in the sbt console.
 
 ## Writing your own tasks
 
-sbt makes it very easy to define your own tasks. Let's write a simple task that prints total number of commits on the current Git branch. Creating a custom task is a two step process:
+`sbt` makes it very easy to define your own tasks. Let's write a simple task that prints total number of commits on the current Git branch. Creating a custom task is a two step process:
 
 1. You have to define a `TaskKey` for your task
 2. You have to provide the task definition
 
-To write our task we will first write `gitCommitCountTask` `taskKey` in the `build.sbt` file.
+To write our task we will first write `gitCommitCountTask` `taskKey` in the `build.sbt` file:
 
 ```scala
 val gitCommitCountTask = taskKey[String]("Prints commit count of the current branch")
@@ -503,7 +502,7 @@ val gitCommitCountTask = taskKey[String]("Prints commit count of the current bra
 
 The type specified in the taskKey i.e. String in this case becomes the type of the task result.
 
-The task definition of the `gitCommitCountTask` is shown below. It uses `git` command-line to get the relevant information.
+The task definition of the `gitCommitCountTask` is shown below. It uses `git` command-line to get the relevant information:
 
 ```scala
 gitCommitCountTask := {
@@ -514,7 +513,7 @@ gitCommitCountTask := {
 }
 ```
 
-You can run the `gitCommitCountTask` task as shown below. You can also execute the `gitCommitCountTask` from inside the sbt shell.
+You can run the `gitCommitCountTask` task as shown below. You can also execute the `gitCommitCountTask` from inside the sbt shell:
 
 ```
 $ sbt gitCommitCountTask
@@ -531,7 +530,7 @@ Plugin allows you to package your tasks so that you can distribute and reuse the
 
 > Scalastyle examines your Scala code and indicates potential problems with it. If you have come across Checkstyle for Java, then you’ll have a good idea what scalastyle is. Except that it’s for Scala obviously.
 
-To include `scalastyle-sbt-plugin` in your build, you have to add `scalastyle-sbt-plugin` inside `project/plugins.sbt` file. Create a new file `project/plugins.sbt` and add the following content in it.
+To include `scalastyle-sbt-plugin` in your build, you have to add `scalastyle-sbt-plugin` inside `project/plugins.sbt` file. Create a new file `project/plugins.sbt` and add the following content in it:
 
 ```scala
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
@@ -539,7 +538,7 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
 
 > It is a naming convention to define plugins in the `plugins.sbt` file. You can name it anything else as well.
 
-Once you have defined the plugin, you can use the plugin by executing the task it exposes. The `scalastyle-sbt-plugin` exposes `scalastyle` task. Let's check the quality of our code.
+Once you have defined the plugin, you can use the plugin by executing the task it exposes. The `scalastyle-sbt-plugin` exposes `scalastyle` task. Let's check the quality of our code:
 
 ```
 → sbt scalastyle
@@ -562,7 +561,7 @@ java.lang.RuntimeException: config does not exist: scalastyle-config.xml
 [error] Total time: 0 s, completed 10 Jan, 2016 6:01:23 PM
 ```
 
-The task will fail because plugin could not find `scalastyle-config.xml`. You can generate the configuration file using the `scalastyleGenerateConfig` task.
+The task will fail because plugin could not find `scalastyle-config.xml`. You can generate the configuration file using the `scalastyleGenerateConfig` task:
 
 ```
 → sbt scalastyleGenerateConfig
@@ -578,7 +577,7 @@ You can learn more about Scalastyle from its website [http://www.scalastyle.org/
 
 ## Tips
 
-These are some of the quick tips that might help you when you use sbt.
+These are some of the quick tips that might help you when you use `sbt`.
 
 ### Tip 1: Getting the right Scala version with %%
 
@@ -588,7 +587,7 @@ As mentioned before Scala remain binary compatible only between minor versions. 
 libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.6" % "test"
 ```
 
-The scala version was specified in the artifactID "scalatest_2.11". This means every time we update the Scala version we would have to update the dependency. We can implicitly get the Scala version using the %% operator.
+The scala version was specified in the artifactID "scalatest_2.11". This means every time we update the Scala version we would have to update the dependency. We can implicitly get the Scala version using the `%%` operator:
 
 ```scala
 libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
@@ -596,7 +595,7 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.6" % "test"
 
 ### Tip 2: Cross-compilation for multiple Scala versions
 
-One thing that we all Java developers take for granted is that Java remain binary compatible between releases. This means you can run code written using JDK 1.0 on JDK 1.8. This is not true for Scala. Scala only remains binary compatible between minor versions i.e. 2.10.1 will remain binary compatible with minor version 2.10.2 but not with major version 2.11.0.  Let's suppose you have a library that you want to compile using different versions of Scala. In your build.sbt you can .
+One thing that we all Java developers take for granted is that Java remain binary compatible between releases. This means you can run code written using JDK 1.0 on JDK 1.8. This is not true for Scala. Scala only remains binary compatible between minor versions i.e. 2.10.1 will remain binary compatible with minor version 2.10.2 but not with major version 2.11.0. Let's suppose you have a library that you want to compile using different versions of Scala. In your `build.sbt` you can .
 
 ```scala
 scalaVersion := "2.11.1"
@@ -604,12 +603,12 @@ scalaVersion := "2.11.1"
 crossScalaVersions := Seq("2.9.1", "2.10.1")
 ```
 
-Now, when you will use sbt to build the project by default, it will build the project against the Scala version `2.11.1` but, you have an option to use other Scala versions defined in your build script.
+Now, when you will use sbt to build the project by default, it will build the project against the Scala version 2.11.1 but, you have an option to use other Scala versions defined in your build script.
 
 
-### Tip 3: Pass options to scala compiler
+### Tip 3: Pass options to Scala compiler
 
-You can pass options to `scalac` by defining a setting `scalacOptions` as shown below.
+You can pass options to `scalac` by defining a setting `scalacOptions` as shown below:
 
 ```scala
 scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation", "-encoding", "utf8")
@@ -617,7 +616,7 @@ scalacOptions ++= Seq("-feature", "-language:_", "-unchecked", "-deprecation", "
 
 ### Tip 4: View compile classpath dependencies
 
-To view compile classpath dependencies you can run the following task from inside the sbt shell. Task and its output is shown below.
+To view compile classpath dependencies you can run the following task from inside the sbt shell. Task and its output is shown below:
 
 ```scala
 > show compile:dependencyClasspath
@@ -631,7 +630,7 @@ Similarly, if you have to view test classpath then you can run `show test:depend
 
 If you are Maven or Gradle user then one command that you would like to use is to view the dependency graph. sbt does not have a inbuilt command to view the dependency graph. You can view the dependency graph by using [sbt-dependency-graph plugin](https://github.com/jrudolph/sbt-dependency-graph).
 
-To use the plugin, first add the plugin to `project/plugins.sbt`.
+To use the plugin, first add the plugin to `project/plugins.sbt`:
 
 ```scala
 addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.1")
@@ -639,7 +638,7 @@ addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.1")
 
 Once done, reload the build configuration using the `reload` task.
 
-Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You can refer to sbt-dependency-graph plugin [documentation](https://github.com/jrudolph/sbt-dependency-graph#main-tasks) to get an overview of all the defined tasks.
+Now, you will be able to use tasks defined by sbt-dependency-graph plugin. You can refer to sbt-dependency-graph plugin [documentation](https://github.com/jrudolph/sbt-dependency-graph#main-tasks) to get an overview of all the defined tasks:
 
 ```
 > dependencyTree
