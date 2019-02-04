@@ -506,8 +506,8 @@ The task definition of the `gitCommitCountTask` is shown below. It uses `git` co
 
 ```scala
 gitCommitCountTask := {
-  val branch = Process("git symbolic-ref -q HEAD").lines.head.replace("refs/heads/","")
-  val commitCount = Process(s"git rev-list --count $branch").lines.head
+  val branch = scala.sys.process.Process("git symbolic-ref -q HEAD").lines.head.replace("refs/heads/","")
+  val commitCount = scala.sys.process.Process(s"git rev-list --count $branch").lines.head
   println(s"total number of commits on [$branch]: $commitCount")
   commitCount
 }
