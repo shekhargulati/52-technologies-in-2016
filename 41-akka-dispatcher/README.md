@@ -1,5 +1,5 @@
 
-Understanding Akka Dispatchers
+Understanding Akka Dispatchers [![TimeToRead](http://ttr.myapis.xyz/ttr.svg?pageUrl=https://github.com/shekhargulati/52-technologies-in-2016/blob/master/41-akka-dispatcher/README.md)](http://ttr.myapis.xyz/)
 ---
 
 Welcome to the forty-first post of [52-technologies-in-2016](https://github.com/shekhargulati/52-technologies-in-2016) blog series. This week I had to work on tuning a execution engine that is built using Akka. [Akka](http://akka.io/) is a toolkit and runtime for building highly concurrent, distributed and resilient message driven systems. This post assumes you already know Akka. Actor needs a dispatcher to perform its task. A dispatcher relies on executor to provide thread. There are two types of executors a dispatcher can have: 1) `fork-join-executor` 2) `thread-pool-executor`. In this post, we will understand how you can configure `fork-join-executor` and `thread-pool-executor` to meet your needs.
