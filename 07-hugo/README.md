@@ -1,11 +1,11 @@
-Hugo: A Modern WebSite Engine That Just Works
+Hugo: A Modern Website Engine That Just Works
 ----
 
 This week I decided to take a break from Scala and scratch my own itch my building an online bookshelf using Hugo. **[Hugo](https://gohugo.io/)** is a static site generator written in Go programming language. You can use it for building modern static websites. Static site generator takes your content files written in a markup language like [Markdown](https://en.wikipedia.org/wiki/Markdown), apply layouts you have defined, and generate static HTML files that can be delivered to the user. Static websites are nothing new, they date back to the [first ever website](http://info.cern.ch/hypertext/WWW/TheProject.html) in human history. We started with static websites, then moved to dynamic websites, and finally we are moving back to static websites for use-cases where it make sense. Most common use-cases for static websites are blogs, product documentation, help guides, tutorials, online portfolio or resume.
 
 > **This blog is part of my year long blog series [52 Technologies in 2016](https://github.com/shekhargulati/52-technologies-in-2016)**
 
-Static generators again came into limelight after the introduction of [Jekyll](https://jekyllrb.com/) in 2008. Jekyll is a static website generator written in Ruby. It was created by Github co-founder Tom Preston-Werner. Because Jekyll was created by Github co-founder, it has very good integration with Github. It was very easy to get your website running on Github pages.
+Static generators again came into limelight after the introduction of [Jekyll](https://jekyllrb.com/) in 2008. Jekyll is a static website generator written in Ruby. It was created by Github co-founder Tom Preston-Werner. Because Jekyll was created by GitHub co-founder, it has very good integration with GitHub. It was very easy to get your website running on Github pages.
 
 Another reason static site generators are back in popularity has to do with a lot of advantages they offer. In my opinion, static generators offer following advantages:
 
@@ -15,7 +15,7 @@ Another reason static site generators are back in popularity has to do with a lo
 4. Less maintenance overhead
 5. Works well for a lot of use-cases like blogs, documentation, etc.
 6. Low barrier to entry
-7. Runs out of the box on many platforms like Github pages, Amazon S3, or any web server like Nginx
+7. Runs out of the box on many platforms like GitHub pages, Amazon S3, or any web server like Nginx
 8. Good developer workflow using Git
 
 I would recommend that you read [good post by David Walsh on advantages and disadvantages of static site generators](https://davidwalsh.name/introduction-static-site-generators). If you look at Google trends, you will notice a steep rise in interest for static site generators. As you can see below, after 2011 more and more people are searching about `static site generator`.
@@ -49,9 +49,9 @@ Building our bookshelf
 
 Now, that we know about static site generators and Hugo let's start building our bookshelf step by step. By the end of this tutorial, we will have our bookshelf hosted on Github pages and mapped to a domain.
 
-## Github repository
+## GitHub repository
 
-The code for today’s demo application is available on github: [bookshelf](./bookshelf).
+The code for today’s demo application is available on GitHub: [bookshelf](./bookshelf).
 
 ## Step 1: Getting started with Hugo
 
@@ -432,7 +432,7 @@ $ hugo server --theme=hugo_theme_robust
 
 ## Step 10: Integrate Disqus
 
-Disqus allows you to integrate comments in your static blog. To enable Disqus, you just have to set `disqusShortname`  in the config.toml as shown below.
+Disqus allows you to integrate comments in your static blog. To enable Disqus, you just have to set `disqusShortname` in the config.toml as shown below.
 
 ```
 [Params]
